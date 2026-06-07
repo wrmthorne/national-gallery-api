@@ -1,9 +1,21 @@
 from collections.abc import Iterable
 from functools import singledispatch
 
-from .models import (Archive, Concept, Entity, Event, Exhibition, Location,
-                     Media, Organisation, Package, Person, Place, Publication,
-                     Work)
+from .models import (
+    Archive,
+    Concept,
+    Entity,
+    Event,
+    Exhibition,
+    Location,
+    Media,
+    Organisation,
+    Package,
+    Person,
+    Place,
+    Publication,
+    Work,
+)
 
 
 def _field(label: str, value: str | None) -> str | None:

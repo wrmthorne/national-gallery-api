@@ -39,6 +39,7 @@ def build_sync_transport(
     if not cache:
         return retry
     storage = hishel.SyncSqliteStorage(database_path=database_path, default_ttl=ttl)
+    # pyrefly: ignore[bad-argument-type]  # hishel's try/except ImportError stub confuses the type; sqlite3 is stdlib so the real SyncBaseStorage subclass is always used
     return SyncCacheTransport(next_transport=retry, storage=storage, policy=_policy())
 
 
@@ -49,4 +50,5 @@ def build_async_transport(
     if not cache:
         return retry
     storage = hishel.AsyncSqliteStorage(database_path=database_path, default_ttl=ttl)
+    # pyrefly: ignore[bad-argument-type]  # hishel's try/except ImportError stub confuses the type; sqlite3 is stdlib so the real AsyncBaseStorage subclass is always used
     return AsyncCacheTransport(next_transport=retry, storage=storage, policy=_policy())

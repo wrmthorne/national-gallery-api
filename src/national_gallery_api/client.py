@@ -1,14 +1,27 @@
 from __future__ import annotations
 
 from collections.abc import AsyncIterator, Iterator
-from typing import Any, Generic, TypeVar
+from typing import Any, TypeVar
 
 import httpx
 from pydantic import BaseModel
 
 from .exceptions import APIError, NotFoundError
-from .models import (Archive, Concept, Entity, Event, Exhibition, Location, Media,
-                     Organisation, Package, Person, Place, Publication, Work)
+from .models import (
+    Archive,
+    Concept,
+    Entity,
+    Event,
+    Exhibition,
+    Location,
+    Media,
+    Organisation,
+    Package,
+    Person,
+    Place,
+    Publication,
+    Work,
+)
 from .queries import EntityType, build_search
 from .transport import build_async_transport, build_sync_transport
 
@@ -43,7 +56,7 @@ class Total(BaseModel):
         return self.relation == "eq"
 
 
-class SearchResults(Generic[E]):
+class SearchResults[E: Entity]:
     def __init__(self, items: list[E], payload: dict[str, Any]) -> None:
         self._items = items
         self.raw = payload
@@ -61,8 +74,9 @@ class SearchResults(Generic[E]):
         return self._items[index]
 
 
-def _page_body(text: str | None, base: EntityType, actual: str | None,
-               page_size: int, after: list[Any] | None) -> dict[str, Any]:
+def _page_body(
+    text: str | None, base: EntityType, actual: str | None, page_size: int, after: list[Any] | None
+) -> dict[str, Any]:
     body = build_search(text, base=base, actual=actual, size=page_size, from_=0)
     body["sort"] = _SORT
     if after is not None:
@@ -73,16 +87,18 @@ def _page_body(text: str | None, base: EntityType, actual: str | None,
 _UNSET: Any = object()
 
 
-class _SyncResource(Generic[E]):
-    def __init__(self, client: "NationalGallery", model: type[E], base: EntityType,
-                 default_actual: str | None = None) -> None:
+class _SyncResource[E: Entity]:
+    def __init__(
+        self, client: NationalGallery, model: type[E], base: EntityType, default_actual: str | None = None
+    ) -> None:
         self._client = client
         self._model = model
         self._base = base
         self._default_actual = default_actual
 
-    def search(self, text: str | None = None, *, actual: str | None = _UNSET,
-               size: int = 10, from_: int = 0) -> SearchResults[E]:
+    def search(
+        self, text: str | None = None, *, actual: str | None = _UNSET, size: int = 10, from_: int = 0
+    ) -> SearchResults[E]:
         actual = self._default_actual if actual is _UNSET else actual
         body = build_search(text, base=self._base, actual=actual, size=size, from_=from_)
         payload = self._client.search(body)
@@ -95,8 +111,7 @@ class _SyncResource(Generic[E]):
             raise NotFoundError(f"No entity with PID {pid!r}")
         return items[0]
 
-    def iter_all(self, text: str | None = None, *, actual: str | None = _UNSET,
-                 page_size: int = 100) -> Iterator[E]:
+    def iter_all(self, text: str | None = None, *, actual: str | None = _UNSET, page_size: int = 100) -> Iterator[E]:
         actual = self._default_actual if actual is _UNSET else actual
         after: list[Any] | None = None
         while True:
@@ -125,8 +140,14 @@ class NationalGallery:
     media: _SyncResource[Media]
     packages: _SyncResource[Package]
 
-    def __init__(self, *, cache: bool = False, ttl: float | None = 3600.0,
-                 database_path: str = "hishel_cache.db", timeout: float = 30.0) -> None:
+    def __init__(
+        self,
+        *,
+        cache: bool = False,
+        ttl: float | None = 3600.0,
+        database_path: str = "hishel_cache.db",
+        timeout: float = 30.0,
+    ) -> None:
         transport = build_sync_transport(cache=cache, ttl=ttl, database_path=database_path)
         self._client = httpx.Client(transport=transport, timeout=timeout)
         for attr, model, base, default_actual in _RESOURCES:
@@ -141,23 +162,25 @@ class NationalGallery:
     def close(self) -> None:
         self._client.close()
 
-    def __enter__(self) -> "NationalGallery":
+    def __enter__(self) -> NationalGallery:
         return self
 
     def __exit__(self, *exc: object) -> None:
         self.close()
 
 
-class _AsyncResource(Generic[E]):
-    def __init__(self, client: AsyncNationalGallery, model: type[E], base: EntityType,
-                 default_actual: str | None = None) -> None:
+class _AsyncResource[E: Entity]:
+    def __init__(
+        self, client: AsyncNationalGallery, model: type[E], base: EntityType, default_actual: str | None = None
+    ) -> None:
         self._client = client
         self._model = model
         self._base = base
         self._default_actual = default_actual
 
-    async def search(self, text: str | None = None, *, actual: str | None = _UNSET,
-                     size: int = 10, from_: int = 0) -> SearchResults[E]:
+    async def search(
+        self, text: str | None = None, *, actual: str | None = _UNSET, size: int = 10, from_: int = 0
+    ) -> SearchResults[E]:
         actual = self._default_actual if actual is _UNSET else actual
         body = build_search(text, base=self._base, actual=actual, size=size, from_=from_)
         payload = await self._client.search(body)
@@ -170,8 +193,9 @@ class _AsyncResource(Generic[E]):
             raise NotFoundError(f"No entity with PID {pid!r}")
         return items[0]
 
-    async def iter_all(self, text: str | None = None, *, actual: str | None = _UNSET,
-                       page_size: int = 100) -> AsyncIterator[E]:
+    async def iter_all(
+        self, text: str | None = None, *, actual: str | None = _UNSET, page_size: int = 100
+    ) -> AsyncIterator[E]:
         actual = self._default_actual if actual is _UNSET else actual
         after: list[Any] | None = None
         while True:
@@ -200,8 +224,14 @@ class AsyncNationalGallery:
     media: _AsyncResource[Media]
     packages: _AsyncResource[Package]
 
-    def __init__(self, *, cache: bool = False, ttl: float | None = 3600.0,
-                 database_path: str = "hishel_cache.db", timeout: float = 30.0) -> None:
+    def __init__(
+        self,
+        *,
+        cache: bool = False,
+        ttl: float | None = 3600.0,
+        database_path: str = "hishel_cache.db",
+        timeout: float = 30.0,
+    ) -> None:
         transport = build_async_transport(cache=cache, ttl=ttl, database_path=database_path)
         self._client = httpx.AsyncClient(transport=transport, timeout=timeout)
         for attr, model, base, default_actual in _RESOURCES:

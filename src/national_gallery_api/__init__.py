@@ -1,8 +1,24 @@
 from .client import AsyncNationalGallery, NationalGallery, SearchResults, Total
 from .exceptions import APIError, NationalGalleryError, NotFoundError
-from .models import (Archive, Concept, Entity, Event, Exhibition, Location, Media,
-                     Organisation, Package, Person, Place, Publication, Reference,
-                     Work, model_for, parse_hit, parse_response)
+from .models import (
+    Archive,
+    Concept,
+    Entity,
+    Event,
+    Exhibition,
+    Location,
+    Media,
+    Organisation,
+    Package,
+    Person,
+    Place,
+    Publication,
+    Reference,
+    Work,
+    model_for,
+    parse_hit,
+    parse_response,
+)
 from .queries import EntityType, build_search
 from .rendering import render_candidates, to_context
 

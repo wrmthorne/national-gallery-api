@@ -31,6 +31,19 @@ indent-width = 4
 target-version = "py312"
 
 [tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort (import sorting)
+    "N",    # pep8-naming
+    "UP",   # pyupgrade (modern syntax for your py312 target)
+    "B",    # flake8-bugbear (likely bugs)
+    "SIM",  # flake8-simplify
+    "C4",   # flake8-comprehensions
+    "RUF",  # Ruff-specific rules
+]
+ignore = []
 
 fixable = ["ALL"]
 
@@ -40,6 +53,10 @@ indent-style = "space"
 skip-magic-trailing-comma = false
 line-ending = "auto"
 
+[tool.pyrefly]
+project-includes = ["src"]
+python-version = "3.12"
+
 
 [build-system]
 requires = ["uv_build>=0.11.14,<0.12.0"]
@@ -47,5 +64,6 @@ build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
+    "pyrefly>=1.0.0",
     "ruff>=0.15.16",
 ]

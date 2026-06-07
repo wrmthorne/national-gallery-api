@@ -23,8 +23,8 @@ _BY_BASE: dict[str, type[Entity]] = {
 
 
 def model_for(source: dict[str, Any]) -> type[Entity]:
-    datatype = source.get("@datatype") or {}
-    base = datatype.get("base")
+    datatype: dict[str, Any] = source.get("@datatype") or {}
+    base = datatype.get("base", "")
     if base == "agent":
         return Organisation if datatype.get("actual") == "Organisation" else Person
     return _BY_BASE.get(base, Entity)
@@ -41,9 +41,35 @@ def parse_response(payload: dict[str, Any]) -> list[Entity]:
 
 
 __all__ = [
-    "Address", "Agent", "Archive", "BibliographyEntry", "Concept", "Coordinate",
-    "Creation", "DataType", "Entity", "Event", "Exhibition", "Identifier",
-    "Location", "Maker", "Media", "MediaSource", "Named", "Organisation",
-    "Package", "Person", "Place", "Publication", "Reference", "Status", "Term",
-    "ValueEntry", "Web", "Work", "model_for", "parse_hit", "parse_response",
+    "Address",
+    "Agent",
+    "Archive",
+    "BibliographyEntry",
+    "Concept",
+    "Coordinate",
+    "Creation",
+    "DataType",
+    "Entity",
+    "Event",
+    "Exhibition",
+    "Identifier",
+    "Location",
+    "Maker",
+    "Media",
+    "MediaSource",
+    "Named",
+    "Organisation",
+    "Package",
+    "Person",
+    "Place",
+    "Publication",
+    "Reference",
+    "Status",
+    "Term",
+    "ValueEntry",
+    "Web",
+    "Work",
+    "model_for",
+    "parse_hit",
+    "parse_response",
 ]
