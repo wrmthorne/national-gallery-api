@@ -1,0 +1,20 @@
+[project]
+name = "national-gallery-api"
+version = "0.1.0"
+description = "Python client for the National Gallery (London) Elasticsearch API"
+keywords = ["national gallery", "ng", "api", "elasticsearch", "art", "museum", "london"]
+readme = "README.md"
+authors = [
+    { name = "William Thorne", email = "wthorne1@sheffield.ac.uk" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "hishel>=1.2.1",
+    "httpx>=0.28.1",
+    "httpx-retries>=0.5.0",
+    "pydantic>=2.13.4",
+]
+
+[build-system]
+requires = ["uv_build>=0.11.14,<0.12.0"]
+build-backend = "uv_build"
