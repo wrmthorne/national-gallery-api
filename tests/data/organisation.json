@@ -1,0 +1,133 @@
+{
+  "summary": {
+    "title": "Wallraf-Richartz-Museum & Fondation Corboud"
+  },
+  "identifier": [
+    {
+      "type": "PID",
+      "value": "0P3C-0001-0000-0000"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (NG alternative)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I3T-000B-0000-0000",
+            "id": "concept-pid_(ng_alternative)",
+            "uuid": "290420fc-0c85-3c90-91ed-b9a81a2f930f"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        },
+        {
+          "summary": {
+            "title": "PID (NG alternative)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I3T-000B-0000-0000",
+            "id": "concept-pid_(ng_alternative)",
+            "uuid": "290420fc-0c85-3c90-91ed-b9a81a2f930f"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (NG alternative)",
+      "value": "001-048L-0000"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974102196,
+    "sequence": 1592584,
+    "uid": "0P3C-0001-0000-0000",
+    "added": 1697553996940,
+    "stream": "tms",
+    "id": "agent-545",
+    "source": "Tms",
+    "uuid": "6e9dfffb-bae4-35a0-8bbb-fdc1cc17d526"
+  },
+  "address": {
+    "country": "Germany",
+    "city": "Cologne"
+  },
+  "web": {
+    "url": [
+      {
+        "type": "website",
+        "value": "https://www.wallraf.museum/"
+      }
+    ]
+  },
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "name": [
+    {
+      "institution": "Wallraf-Richartz-Museum",
+      "created_formatted": "2006-11-22 12:14:16",
+      "created": 1164197656437,
+      "type": "Non-Preferred Name",
+      "value": "Wallraf-Richartz-Museum"
+    },
+    {
+      "institution": "Wallraf-Richartz-Museum & Fondation Corboud",
+      "type": "primary name",
+      "value": "Wallraf-Richartz-Museum & Fondation Corboud"
+    },
+    {
+      "type": "sort name",
+      "value": "Wallraf-Richartz-Museum & Fondation Corboud"
+    }
+  ],
+  "@datatype": {
+    "actual": "Organisation",
+    "base": "agent"
+  }
+}

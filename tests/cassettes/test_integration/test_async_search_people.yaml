@@ -1,0 +1,314 @@
+interactions:
+- request:
+    body: '{"query":{"bool":{"must":[{"match":{"summary.title":"rembrandt"}},{"term":{"@datatype.base":"agent"}},{"term":{"@datatype.actual":"Individual"}}]}},"size":10,"from":0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '167'
+      Content-Type:
+      - application/json
+      Host:
+      - data.ng.ac.uk
+      User-Agent:
+      - python-httpx/0.28.1
+    method: POST
+    uri: https://data.ng.ac.uk/es/public/_search
+  response:
+    body:
+      string: "{\"took\":1,\"timed_out\":false,\"_shards\":{\"total\":2,\"successful\":2,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":2,\"relation\":\"eq\"},\"max_score\":13.1665125,\"hits\":[{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0PZF-0001-0000-0000\",\"_score\":13.1665125,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\"],\"_source\":{\"date\":[{\"from\":\"1606\",\"to\":\"1669\",\"value\":\"1606
+        - 1669\"}],\"summary\":{\"title\":\"Rembrandt\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0PZF-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-03EP-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500011051\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q5598\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/64013650\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500011051\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q5598\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/66219\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/64013650\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"}],\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1669\",\"to\":\"1669\",\"value\":\"1669\"}],\"@entity\":\"lifecycle\"},\"birth\":{\"date\":[{\"from\":\"1606\",\"to\":\"1606\",\"value\":\"1606\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2019-09-26\"}],\"created_formatted\":\"2019-11-13
+        17:46:55\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1573667215807,\"formatted\":\"<h2>Early
+        life and training</h2><p>Rembrandt Harmenszoon van Rijn was born in Leiden
+        in the Netherlands in 1606. His father was a miller, comfortably off and able
+        to send Rembrandt to the town's Latin School. At the age of 14, Rembrandt
+        began studying at the famous University of Leiden (unusual for a miller's
+        son), but academic life did not suit him. After a few months he left to begin
+        an apprenticeship as a painter.</p><p>Leiden did not offer much in the way
+        of artistic talent, and in 1624, after three years with a local painter, Rembrandt
+        went to Amsterdam to study briefly with Pieter Lastman. He then moved back
+        to Leiden and set up as an independent painter, sharing a workshop with Jan
+        Lievens. It was not an easy climate in which to work. Following the Protestant
+        Reformation, the local churches no longer provided artists with any commissions
+        as the Catholic church did in other countries. As a consequence artists had
+        to concentrate on commissions from private individuals. Rembrandt quickly
+        began to make a name for himself as a painter of historical subjects.</p><p>Unusually,
+        Rembrandt did not follow the advice that was given to young painters, namely
+        to travel to Italy to study Italian art first hand. Instead he felt that he
+        could learn everything he needed to from the art available in his native country.</p><p></p><h2>Amsterdam
+        and marriage</h2><p>In around 1631, Rembrandt moved to Amsterdam, the most
+        prosperous port in northern Europe, and 'crowded with merchants from every
+        nation'. It offered a young and successful artist far more opportunities than
+        sleepy Leiden. <br /><br />Rembrandt lodged in the house of an art dealer
+        called Hendrick van Uylenburgh, and while there, he met his landlord's young
+        cousin Saskia. They were married in 1634. The numerous paintings and drawings
+        of her suggest the two were very happily married. In 1636, Saskia gave birth
+        to their first son, Rumbartus. He died after only two weeks. Over the next
+        four years two more children were born, but died within a couple of months.
+        <br /><br />Professionally, Rembrandt went from strength to strength. The
+        most important families and organisations in the city commissioned paintings.
+        As well as portraits, he produced <a href=\\\"/paintings/glossary/baroque\\\"
+        rel=\\\"nofollow\\\">baroque</a> history paintings such as <a href=\\\"/paintings/rembrandt-belshazzars-feast\\\"
+        rel=\\\"nofollow\\\">Belshazzar's Feast</a>. Cash flow was sometimes a problem\_\u2013
+        and Rembrandt's cash flowed rather freely. He was a compulsive buyer of art,
+        and a collector of all manner of antiquities, props, and weapons to be used
+        in paintings. Saskia's family accused him of squandering her fortune. But
+        Rembrandt was the most famous artist in the city. What could go wrong?</p><h2>Continued
+        success</h2><p>In 1639, Rembrandt and Saskia moved into a grander house, next
+        to his old friend van Uylenburgh. He sketched endlessly - people on the street,
+        beggars, circuses, women and children, Saskia. His painting was influenced
+        by new developments in Italian art which reached the Netherlands via prints,
+        and via his more travelled colleagues. Many of his contemporaries had started
+        to experiment with the dramatic use of lighting developed by <a href=\\\"/artists/michelangelo-merisi-da-caravaggio\\\"
+        rel=\\\"nofollow\\\">Caravaggio.</a><br /><br />The influence of Caravaggio
+        is evident in Rembrandt's work from the 1630s. He developed a new way of describing
+        faces with patterns of light and shadow, rather than simply lighting one side
+        and shading the other. Shadows around the eyes of his portraits, making it
+        hard to read a precise expression give his canvases the extraordinary impression
+        of the living, thinking mind behind the face. <br /><br />In 1641 a fourth
+        child, Titus, was born. And lived. Saskia was unwell after the birth and Rembrandt
+        made various drawings of her looking tired and drawn in bed. In 1642, Saskia
+        made a will leaving Rembrandt and Titus her fortune, although most of Rembrandt's
+        share would be lost if he married. She died shortly after, still aged only
+        30, probably from plague or TB.</p><h2>Domestic complications</h2><p>Alone
+        with a baby to care for, Rembrandt had to employ a nurse and took on a widow
+        called Geertge Dircx. She became his common law wife for a short time, but
+        then he took on another servant, Hendrickje Stoffels, and fell in love with
+        her. Geertge took Rembrandt to court on the grounds that he had promised to
+        marry her. He charged her with pawning some of Saskia's jewellery that she
+        had left to Titus in her will. After much bitter wrangling, Rembrandt somehow
+        had her sent to a house of correction. Meanwhile he and Hendrickje lived happily
+        together, except that the terms of Saskia's will meant that he couldn't afford
+        to marry her. She appears in numerous paintings, and may have been the model
+        for <a href=\\\"/paintings/rembrandt-a-woman-bathing-in-a-stream-hendrickje-stoffels\\\"
+        rel=\\\"nofollow\\\">A Woman Bathing</a>.</p><p>One notable aspect of his
+        later paintings is the use of broad brushstrokes, sometimes applied with a
+        palette knife. While the earlier pictures had a smooth finish, the later works
+        are designed to work only from a distance.</p><h2>Bankruptcy</h2><p>In the
+        1650s Amsterdam was hit by a massive economic depression. Rembrandt had not
+        even completed half the payments on his house and his creditors began to chase
+        him for money. <br /><br />In July 1656, he successfully applied for 'cessio
+        bonorum' - a respectable form of bankruptcy which avoided imprisonment. All
+        his goods, including an impressive collection of paintings, were sold off
+        for a pittance. Rembrandt, Titus and Hendkrickje moved across town to a much
+        poorer district, where Rembrandt continued to paint. He had always used himself
+        as a model, but in the last twenty years of his life he painted self portraits
+        with increasing frequency. In 1663, Hendrickje died after a long illness.
+        Titus was left to look after his father. Continued money problems forced them
+        to sell Saskia's tomb, but still Rembrandt could not resist putting in an
+        offer for a Holbein that came up for sale. <br /><br />Titus married in 1668
+        the daughter of an old family friend, then seven months later, he died. A
+        daughter, Titia, was born six months later. In 1669, Rembrandt himself died
+        and was buried in the <a href=\\\"/paintings/jan-van-der-heyden-view-of-the-westerkerk-amsterdam\\\"
+        rel=\\\"nofollow\\\">Westerkerk</a> next to Hendrickje and Titus. There was
+        no official notice of his death.</p>\",\"source\":\"TMS\",\"type\":\"web text\",\"value\":\"Early
+        life and trainingRembrandt Harmenszoon van Rijn was born in Leiden in the
+        Netherlands in 1606. His father was a miller, comfortably off and able to
+        send Rembrandt to the town's Latin School. At the age of 14, Rembrandt began
+        studying at the famous University of Leiden (unusual for a miller's son),
+        but academic life did not suit him. After a few months he left to begin an
+        apprenticeship as a painter.Leiden did not offer much in the way of artistic
+        talent, and in 1624, after three years with a local painter, Rembrandt went
+        to Amsterdam to study briefly with Pieter Lastman. He then moved back to Leiden
+        and set up as an independent painter, sharing a workshop with Jan Lievens.
+        It was not an easy climate in which to work. Following the Protestant Reformation,
+        the local churches no longer provided artists with any commissions as the
+        Catholic church did in other countries. As a consequence artists had to concentrate
+        on commissions from private individuals. Rembrandt quickly began to make a
+        name for himself as a painter of historical subjects.Unusually, Rembrandt
+        did not follow the advice that was given to young painters, namely to travel
+        to Italy to study Italian art first hand. Instead he felt that he could learn
+        everything he needed to from the art available in his native country.Amsterdam
+        and marriageIn around 1631, Rembrandt moved to Amsterdam, the most prosperous
+        port in northern Europe, and 'crowded with merchants from every nation'. It
+        offered a young and successful artist far more opportunities than sleepy Leiden.
+        Rembrandt lodged in the house of an art dealer called Hendrick van Uylenburgh,
+        and while there, he met his landlord's young cousin Saskia. They were married
+        in 1634. The numerous paintings and drawings of her suggest the two were very
+        happily married. In 1636, Saskia gave birth to their first son, Rumbartus.
+        He died after only two weeks. Over the next four years two more children were
+        born, but died within a couple of months. Professionally, Rembrandt went from
+        strength to strength. The most important families and organisations in the
+        city commissioned paintings. As well as portraits, he produced baroque history
+        paintings such as Belshazzar's Feast. Cash flow was sometimes a problem\_\u2013
+        and Rembrandt's cash flowed rather freely. He was a compulsive buyer of art,
+        and a collector of all manner of antiquities, props, and weapons to be used
+        in paintings. Saskia's family accused him of squandering her fortune. But
+        Rembrandt was the most famous artist in the city. What could go wrong?Continued
+        successIn 1639, Rembrandt and Saskia moved into a grander house, next to his
+        old friend van Uylenburgh. He sketched endlessly - people on the street, beggars,
+        circuses, women and children, Saskia. His painting was influenced by new developments
+        in Italian art which reached the Netherlands via prints, and via his more
+        travelled colleagues. Many of his contemporaries had started to experiment
+        with the dramatic use of lighting developed by Caravaggio.The influence of
+        Caravaggio is evident in Rembrandt's work from the 1630s. He developed a new
+        way of describing faces with patterns of light and shadow, rather than simply
+        lighting one side and shading the other. Shadows around the eyes of his portraits,
+        making it hard to read a precise expression give his canvases the extraordinary
+        impression of the living, thinking mind behind the face. In 1641 a fourth
+        child, Titus, was born. And lived. Saskia was unwell after the birth and Rembrandt
+        made various drawings of her looking tired and drawn in bed. In 1642, Saskia
+        made a will leaving Rembrandt and Titus her fortune, although most of Rembrandt's
+        share would be lost if he married. She died shortly after, still aged only
+        30, probably from plague or TB.Domestic complicationsAlone with a baby to
+        care for, Rembrandt had to employ a nurse and took on a widow called Geertge
+        Dircx. She became his common law wife for a short time, but then he took on
+        another servant, Hendrickje Stoffels, and fell in love with her. Geertge took
+        Rembrandt to court on the grounds that he had promised to marry her. He charged
+        her with pawning some of Saskia's jewellery that she had left to Titus in
+        her will. After much bitter wrangling, Rembrandt somehow had her sent to a
+        house of correction. Meanwhile he and Hendrickje lived happily together, except
+        that the terms of Saskia's will meant that he couldn't afford to marry her.
+        She appears in numerous paintings, and may have been the model for A Woman
+        Bathing.One notable aspect of his later paintings is the use of broad brushstrokes,
+        sometimes applied with a palette knife. While the earlier pictures had a smooth
+        finish, the later works are designed to work only from a distance.BankruptcyIn
+        the 1650s Amsterdam was hit by a massive economic depression. Rembrandt had
+        not even completed half the payments on his house and his creditors began
+        to chase him for money. In July 1656, he successfully applied for 'cessio
+        bonorum' - a respectable form of bankruptcy which avoided imprisonment. All
+        his goods, including an impressive collection of paintings, were sold off
+        for a pittance. Rembrandt, Titus and Hendkrickje moved across town to a much
+        poorer district, where Rembrandt continued to paint. He had always used himself
+        as a model, but in the last twenty years of his life he painted self portraits
+        with increasing frequency. In 1663, Hendrickje died after a long illness.
+        Titus was left to look after his father. Continued money problems forced them
+        to sell Saskia's tomb, but still Rembrandt could not resist putting in an
+        offer for a Holbein that came up for sale. Titus married in 1668 the daughter
+        of an old family friend, then seven months later, he died. A daughter, Titia,
+        was born six months later. In 1669, Rembrandt himself died and was buried
+        in the Westerkerk next to Hendrickje and Titus. There was no official notice
+        of his death.\",\"status\":\"Active\"}],\"catalogue\":[{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"087Q-000B-0000-0000\",\"id\":\"NM_CB_1991__NG672_v1\",\"source\":\"ngc\",\"uuid\":\"5dcec9a6-48d0-304d-87c8-25372eb09639\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1729182898046,\"location\":\"cat/NM_CB_1991/1/NM_CB_1991__NG672.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":52249}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0874-000B-0000-0000\",\"id\":\"NM_CB_1991__NG54_v1\",\"source\":\"ngc\",\"uuid\":\"e25cc710-8a19-3e37-a03b-f1a4e5ffa6c1\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1729182896406,\"location\":\"cat/NM_CB_1991/1/NM_CB_1991__NG54.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":35793}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0DE5-000B-0000-0000\",\"id\":\"NM_CB_1991__NG221_v2\",\"source\":\"ngc\",\"uuid\":\"faf862fa-7d24-3989-ad38-7b57271f9704\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1739817624955,\"location\":\"cat/NM_CB_1991/2/NM_CB_1991__NG221.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":34291}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0DE0-000B-0000-0000\",\"id\":\"NM_CB_1991__NG672_v2\",\"source\":\"ngc\",\"uuid\":\"d44fd39f-e3b5-3652-89da-94f4f9d03a6b\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1739817626911,\"location\":\"cat/NM_CB_1991/2/NM_CB_1991__NG672.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":52518}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0DE8-000B-0000-0000\",\"id\":\"NM_CB_1991__NG6350_v2\",\"source\":\"ngc\",\"uuid\":\"140bceb8-3a56-3fb6-b60c-ac35832923bb\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1739817633858,\"location\":\"cat/NM_CB_1991/2/NM_CB_1991__NG6350.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":56560}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0DFE-000B-0000-0000\",\"id\":\"NM_CB_1991__NG54_v2\",\"source\":\"ngc\",\"uuid\":\"052dfc3e-e78e-3a5d-ba70-bdfe84812154\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1739817623837,\"location\":\"cat/NM_CB_1991/2/NM_CB_1991__NG54.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":35799}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0DEI-000B-0000-0000\",\"id\":\"NM_CB_1991__NG1675_v2\",\"source\":\"ngc\",\"uuid\":\"a80ad909-7748-3563-98be-b3ff1a2029b5\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1739817631005,\"location\":\"cat/NM_CB_1991/2/NM_CB_1991__NG1675.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":40271}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"object\"}]},\"@admin\":{\"uid\":\"0DF2-000B-0000-0000\",\"id\":\"NM_CB_1991__NG1674_v2\",\"source\":\"ngc\",\"uuid\":\"2830095e-d0a8-3345-a63a-8423f2fba14e\"},\"@processed\":{\"@type\":\"html
+        publication fragment - catalogue\",\"format\":\"xhtml+xml\",\"modified\":1739817629168,\"location\":\"cat/NM_CB_1991/2/NM_CB_1991__NG1674.htm\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":52583}}},\"@type\":\"html
+        publication fragment - catalogue\",\"@datatype\":{\"actual\":\"html publication
+        fragment - catalogue\",\"sub\":[\"object\"],\"base\":\"media\"},\"@entity\":\"reference\"}],\"@admin\":{\"processed\":1777974113862,\"sequence\":1597124,\"uid\":\"0PZF-0001-0000-0000\",\"added\":1697553999255,\"stream\":\"tms\",\"id\":\"agent-1543\",\"source\":\"Tms\",\"uuid\":\"bb9a4c39-8559-3d89-aa29-f7ba960612c4\"},\"bibliography\":[{\"summary\":{\"title\":\"Catalogue
+        Raisonn\xE9 of the Works of the Most Eminent Dutch Painters of the Seventeen
+        Century\"},\"@link\":{\"details\":{\"illustrated\":false,\"page\":\"vol. 7\",\"type\":\"Key
+        bibliography\"}},\"@admin\":{\"uid\":\"0DTS-0008-0000-0000\",\"id\":\"publication-240\",\"uuid\":\"eb366529-fcde-3a3c-b912-25f2dab9213f\"},\"@datatype\":{\"actual\":\"Monograph\",\"sub\":[\"tms\"],\"equivalents\":[{\"@admin\":{\"id\":\"concept-monograph\",\"uuid\":\"adda9f35-d664-3c9d-95f8-43e2737b77c2\",\"status\":\"public\"},\"@entity\":\"reference\"}],\"base\":\"publication\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"Rembrandt
+        Paintings\"},\"@link\":{\"details\":{\"illustrated\":false,\"type\":\"Key
+        bibliography\"}},\"@admin\":{\"uid\":\"0DX1-0008-0000-0000\",\"id\":\"publication-530\",\"uuid\":\"d0761b17-4020-30cb-b9ac-a93e40113cc0\"},\"@datatype\":{\"actual\":\"Monograph\",\"sub\":[\"tms\"],\"equivalents\":[{\"@admin\":{\"id\":\"concept-monograph\",\"uuid\":\"adda9f35-d664-3c9d-95f8-43e2737b77c2\",\"status\":\"public\"},\"@entity\":\"reference\"}],\"base\":\"publication\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"The
+        Rembrandt Documents\"},\"@link\":{\"details\":{\"illustrated\":false,\"page\":\"46-7\"}},\"@admin\":{\"uid\":\"0DSE-0008-0000-0000\",\"id\":\"publication-395\",\"uuid\":\"0070b4bc-801d-3017-a6cb-8d76498c1fff\"},\"@datatype\":{\"actual\":\"Article
+        in journal\",\"sub\":[\"tms\"],\"equivalents\":[{\"@admin\":{\"id\":\"concept-article_in_journal\",\"uuid\":\"1b4e50b6-c2aa-3434-910f-63936d5a9c20\",\"status\":\"public\"},\"@entity\":\"reference\"}],\"base\":\"publication\"},\"@entity\":\"reference\"}],\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"last\":\"Rembrandt\",\"type\":\"primary
+        name\",\"value\":\"Rembrandt\"},{\"type\":\"sort name\",\"value\":\"Rembrandt\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0UNK-000A-0000-0000\",\"_score\":12.583542,\"_source\":{\"date\":[{\"from\":\"1966\",\"to\":\"1966\",\"value\":\"born
+        1966\"}],\"summary\":{\"title\":\"Rembrandt Duits\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0UNK-000A-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q112556170\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/162371294\"}],\"@admin\":{\"processed\":1777974129483,\"sequence\":1605581,\"uid\":\"0UNK-000A-0000-0000\",\"added\":1717771751683,\"stream\":\"tms\",\"id\":\"agent-11989\",\"source\":\"Tms\",\"uuid\":\"d96aebf9-f69f-3d0f-b3a9-42d07550fc85\"},\"role\":[{\"type\":\"NG\",\"value\":\"publication
+        author\"}],\"legal\":{\"rights\":[{\"details\":\"To encourage the use and
+        reuse of the National Gallery's collection data, they are released under the
+        following dedications and licences:\\r\\nStructured data (as opposed to narrative
+        texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"last\":\"Duits\",\"type\":\"primary
+        name\",\"value\":\"Rembrandt Duits\",\"first\":\"Rembrandt\"},{\"type\":\"sort
+        name\",\"value\":\"Duits, Rembrandt\"}],\"birth\":{\"date\":[{\"from\":\"1966\",\"to\":\"1966\",\"value\":\"1966\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"}}}]}}"
+    headers:
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type, authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Date:
+      - Sun, 07 Jun 2026 18:28:32 GMT
+      Server:
+      - Apache/2.4.67 (Win64) OpenSSL/3.6.2
+      Vary:
+      - Origin
+      X-elastic-product:
+      - Elasticsearch
+      content-length:
+      - '32779'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+version: 1

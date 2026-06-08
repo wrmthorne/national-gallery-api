@@ -1,0 +1,306 @@
+{
+  "summary": {
+    "title": "Millet; raconté par lui-même ..."
+  },
+  "identifier": [
+    {
+      "type": "LC control number",
+      "value": "22008977"
+    },
+    {
+      "type": "PID",
+      "value": "0ZKX-0006-0000-0000"
+    },
+    {
+      "type": "national bibliography agency control number",
+      "value": "002545528"
+    },
+    {
+      "type": "other standard identifier",
+      "value": "52290309"
+    },
+    {
+      "type": "system control number",
+      "value": "(OCoLC)692496"
+    },
+    {
+      "type": "LC call number",
+      "value": "ND553.M6"
+    }
+  ],
+  "note": [
+    {
+      "type": "general note",
+      "value": "\"Tirage à 600 exemplaires.\""
+    },
+    {
+      "type": "item category",
+      "value": "Book."
+    },
+    {
+      "type": "cataloguing project",
+      "value": "OCLC retroconversion 2016.1"
+    }
+  ],
+  "item": [
+    {
+      "identifier": [
+        {
+          "type": "shelf mark",
+          "value": "NH 1055 MILLET Moreau-Nelaton"
+        }
+      ],
+      "location": "Main Library",
+      "copy": "1",
+      "status": "On Shelf"
+    }
+  ],
+  "agency": [
+    {
+      "name": [
+        {
+          "value": "DLC"
+        }
+      ],
+      "language": [
+        {
+          "code": "eng",
+          "value": "English"
+        }
+      ],
+      "type": "original cataloguing agency"
+    },
+    {
+      "name": [
+        {
+          "value": "MIA"
+        }
+      ],
+      "type": "transcribing agency"
+    },
+    {
+      "name": [
+        {
+          "value": "SER"
+        },
+        {
+          "value": "OCLCQ"
+        },
+        {
+          "value": "OCLCG"
+        },
+        {
+          "value": "STF"
+        },
+        {
+          "value": "UPM"
+        },
+        {
+          "value": "ZWZ"
+        },
+        {
+          "value": "AU@"
+        },
+        {
+          "value": "AUD"
+        },
+        {
+          "value": "UKMGB"
+        },
+        {
+          "value": "OCLCA"
+        },
+        {
+          "value": "OCLCO"
+        },
+        {
+          "value": "EYT"
+        },
+        {
+          "value": "OCLCF"
+        },
+        {
+          "value": "UKNGT"
+        }
+      ],
+      "type": "modifying agency"
+    }
+  ],
+  "subject": [
+    {
+      "summary": {
+        "title": "Millet, Jean François,"
+      },
+      "name": {
+        "value": "Millet, Jean François,"
+      },
+      "@datatype": {
+        "actual": "person",
+        "base": "agent"
+      },
+      "structured": [
+        {
+          "@datatype": {
+            "actual": "date",
+            "base": "person dates"
+          },
+          "from": "1814",
+          "to": "1875",
+          "value": "1814-1875."
+        }
+      ],
+      "@entity": "literal"
+    },
+    {
+      "summary": {
+        "title": "Artists--Correspondence."
+      },
+      "name": {
+        "value": "Artists"
+      },
+      "@datatype": {
+        "base": "topic"
+      },
+      "structured": [
+        {
+          "@datatype": {
+            "base": "general sub division"
+          },
+          "value": "Correspondence."
+        }
+      ],
+      "@entity": "literal"
+    }
+  ],
+  "work": {
+    "creation": {
+      "maker": [
+        {
+          "summary": {
+            "title": "Moreau-Nélaton, Etienne,"
+          },
+          "@link": {
+            "relationship": {
+              "value": "author"
+            }
+          },
+          "name": {
+            "value": "Moreau-Nélaton, Etienne,"
+          },
+          "structured": [
+            {
+              "@datatype": {
+                "actual": "date",
+                "base": "person dates"
+              },
+              "from": "1859",
+              "to": "1927",
+              "value": "1859-1927"
+            }
+          ],
+          "@entity": "literal"
+        }
+      ],
+      "@entity": "lifecycle"
+    }
+  },
+  "@datatype": {
+    "base": "publication"
+  },
+  "media": [
+    {
+      "code": "n",
+      "value": "unmediated"
+    }
+  ],
+  "classification": [
+    {
+      "code": "txt",
+      "value": "text"
+    }
+  ],
+  "title": [
+    {
+      "type": "title statement",
+      "remainder": [
+        "raconté par lui-même ..."
+      ],
+      "value": "Millet;",
+      "primary": true
+    }
+  ],
+  "carrier": [
+    {
+      "code": "nc",
+      "value": "volume"
+    }
+  ],
+  "@admin": {
+    "processed": 1730931493071,
+    "sequence": 860424,
+    "uid": "0ZKX-0006-0000-0000",
+    "added": 1697627733578,
+    "stream": "eos",
+    "id": "OCoLC-ocm00692496",
+    "source": "National Gallery EOS Library Management System",
+    "uuid": "a5214683-08ce-3469-993a-24cc4ab5d510"
+  },
+  "contents": [
+    {
+      "value": "Contains extracts from Millet's letters and illustrations."
+    }
+  ],
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "creation": [
+    {
+      "date": [
+        {
+          "from": "1921",
+          "to": "1921",
+          "value": "1921."
+        }
+      ],
+      "publisher": [
+        {
+          "name": [
+            {
+              "value": "H. Laurens,"
+            }
+          ],
+          "@entity": "literal"
+        }
+      ],
+      "place": [
+        {
+          "name": [
+            {
+              "value": "Paris,"
+            }
+          ],
+          "@entity": "literal"
+        }
+      ],
+      "@entity": "lifecycle"
+    }
+  ],
+  "measurements": {
+    "extent": [
+      "3 volumes"
+    ],
+    "other": [
+      "plates (1 color) portraits, facsimiles"
+    ],
+    "dimensions": [
+      {
+        "value": "29 cm"
+      }
+    ]
+  }
+}

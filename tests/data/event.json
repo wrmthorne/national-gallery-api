@@ -1,0 +1,79 @@
+{
+  "date": [
+    {
+      "value": "18 March 1871 - 28 May 1871"
+    }
+  ],
+  "summary": {
+    "title": "The Paris Commune"
+  },
+  "identifier": [
+    {
+      "type": "PID",
+      "value": "0E3P-0008-0000-0000"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974165025,
+    "sequence": 1622088,
+    "uid": "0E3P-0008-0000-0000",
+    "added": 1697554016737,
+    "stream": "tms",
+    "id": "event-8",
+    "source": "Tms",
+    "uuid": "a47c4d41-f707-32af-80a3-dc202619b473"
+  },
+  "recurring": false,
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "name": [
+    {
+      "value": "The Paris Commune"
+    }
+  ],
+  "@datatype": {
+    "actual": "historic event",
+    "equivalents": [
+      {
+        "summary": {
+          "title": "historic event"
+        },
+        "identifier": [
+          {
+            "id": "https://vocab.getty.edu/aat/300069084",
+            "type": "AAT",
+            "value": "events (activities)"
+          }
+        ],
+        "@admin": {
+          "uid": "0I3M-000B-0000-0000",
+          "id": "concept-historic_event",
+          "uuid": "11335a9f-976a-38a3-ac5e-5ce647ee5584"
+        },
+        "@datatype": {
+          "actual": "equivalents",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-equivalents",
+                "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      }
+    ],
+    "base": "event"
+  },
+  "historical": false
+}

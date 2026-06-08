@@ -1,0 +1,437 @@
+interactions:
+- request:
+    body: '{"query":{"bool":{"must":[{"match":{"summary.title":"van gogh"}},{"term":{"@datatype.base":"agent"}},{"term":{"@datatype.actual":"Individual"}}]}},"size":10,"from":0}'
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '166'
+      Content-Type:
+      - application/json
+      Host:
+      - data.ng.ac.uk
+      User-Agent:
+      - python-httpx/0.28.1
+    method: POST
+    uri: https://data.ng.ac.uk/es/public/_search
+  response:
+    body:
+      string: "{\"took\":39,\"timed_out\":false,\"_shards\":{\"total\":2,\"successful\":2,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":221,\"relation\":\"eq\"},\"max_score\":18.641552,\"hits\":[{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0QCE-0001-0000-0000\",\"_score\":18.641552,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\"],\"_source\":{\"date\":[{\"from\":\"1853\",\"to\":\"1890\",\"value\":\"1853
+        - 1890\"}],\"summary\":{\"title\":\"Vincent van Gogh\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0QCE-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-01K1-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500115588\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q5582\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/32439\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/9854560\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"}],\"@admin\":{\"processed\":1777974111879,\"sequence\":1596039,\"uid\":\"0QCE-0001-0000-0000\",\"added\":1697554000575,\"stream\":\"tms\",\"id\":\"agent-1270\",\"source\":\"Tms\",\"uuid\":\"19cd05f7-6896-32b2-b81a-8931ad0f928d\"},\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1890\",\"to\":\"1890\",\"value\":\"1890\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Gogh\",\"type\":\"primary
+        name\",\"value\":\"Vincent van Gogh\",\"first\":\"Vincent\"},{\"type\":\"sort
+        name\",\"value\":\"Gogh, Vincent van\"}],\"birth\":{\"date\":[{\"from\":\"1853\",\"to\":\"1853\",\"value\":\"1853\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2021-10-06\"}],\"created_formatted\":\"2021-10-06
+        11:24:14\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1633515854787,\"formatted\":\"<div><p>Van
+        Gogh is today one of the most popular of the <a href=\\\"/paintings/glossary/post-impressionism\\\">Post-Impressionist</a>
+        painters, although he was not widely appreciated during his lifetime. He is
+        now famed for the great vitality of his works which are characterised by expressive
+        and emotive use of brilliant colour and energetic application of <a href=\\\"/paintings/glossary/impasto\\\">impastoed
+        </a>paint. The traumas of his life, documented in his letters, have tended
+        to dominate and distort modern perceptions of his art.</p></div><p>Van Gogh
+        was born in Holland, the son of a pastor; he travelled to London in 1873,
+        and first visited Paris in 1874. Over the next decade he was employed in various
+        ways, including as a lay preacher. By 1883 he had started painting, and in
+        1885-6 he attended the academy in Antwerp where he was impressed by Japanese
+        prints and by the work of <a href=\\\"/artists/peter-paul-rubens\\\">Rubens</a>.
+        On his return to Paris in 1886 he met artists such as <a href=\\\"/artists/hilaire-germain-edgar-degas\\\">Degas</a>,
+        <a href=\\\"/artists/paul-gauguin\\\">Gauguin</a> and <a href=\\\"/artists/georges-seurat\\\">Seurat</a>,
+        and as a result lightened the colours he used.<br /><br />In 1888 Van Gogh
+        settled in Arles in Provence, where he was visited by Gauguin and painted
+        his now famous series of 'Sunflowers'. In the following year a nervous breakdown
+        brought him to a sanatorium at St Remy; it was at this period that he executed
+        <a href=\\\"/paintings/vincent-van-gogh-a-wheatfield-with-cypresses\\\">'A
+        Wheatfield, with Cypresses'</a>. In 1890, suffering from a new bout of depression,
+        he shot himself in the chest and died two days later.</p>\",\"source\":\"TMS\",\"type\":\"web
+        text\",\"value\":\"Van Gogh is today one of the most popular of the Post-Impressionist
+        painters, although he was not widely appreciated during his lifetime. He is
+        now famed for the great vitality of his works which are characterised by expressive
+        and emotive use of brilliant colour and energetic application of impastoed
+        paint. The traumas of his life, documented in his letters, have tended to
+        dominate and distort modern perceptions of his art.Van Gogh was born in Holland,
+        the son of a pastor; he travelled to London in 1873, and first visited Paris
+        in 1874. Over the next decade he was employed in various ways, including as
+        a lay preacher. By 1883 he had started painting, and in 1885-6 he attended
+        the academy in Antwerp where he was impressed by Japanese prints and by the
+        work of Rubens. On his return to Paris in 1886 he met artists such as Degas,
+        Gauguin and Seurat, and as a result lightened the colours he used.\\r\\n\\r\\nIn
+        1888 Van Gogh settled in Arles in Provence, where he was visited by Gauguin
+        and painted his now famous series of 'Sunflowers'. In the following year a
+        nervous breakdown brought him to a sanatorium at St Remy; it was at this period
+        that he executed 'A Wheatfield, with Cypresses'. In 1890, suffering from a
+        new bout of depression, he shot himself in the chest and died two days later.\",\"status\":\"Active\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0P5D-0001-0000-0000\",\"_score\":10.128778,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\"],\"_source\":{\"date\":[{\"from\":\"1604\",\"to\":\"1671\",\"value\":\"1604/5
+        - 1671\"}],\"summary\":{\"title\":\"Dirck van Delen\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0P5D-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-0112-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500016094\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q711770\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/21682\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/95408280\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"}],\"@admin\":{\"processed\":1777974106697,\"sequence\":1593579,\"uid\":\"0P5D-0001-0000-0000\",\"added\":1697553996884,\"stream\":\"tms\",\"id\":\"agent-1163\",\"source\":\"Tms\",\"uuid\":\"bd547c22-daf3-323d-81b0-a012b3ad13f1\"},\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1671\",\"to\":\"1671\",\"value\":\"1671\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Delen\",\"type\":\"primary
+        name\",\"value\":\"Dirck van Delen\",\"first\":\"Dirck\"},{\"type\":\"sort
+        name\",\"value\":\"Delen, Dirck van\"}],\"birth\":{\"date\":[{\"from\":\"1604\",\"to\":\"1604\",\"value\":\"1604\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2021-10-06\"}],\"created_formatted\":\"2021-10-06
+        11:24:14\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1633515854723,\"formatted\":\"<p>Delen
+        was born in Heusden and perhaps taught by Hendrick Aertsz. By 1626 he had
+        settled in Arnemuiden, near Middelburg, where he died. He was a painter of
+        imaginary architecture.</p>\",\"source\":\"TMS\",\"type\":\"web text\",\"value\":\"Delen
+        was born in Heusden and perhaps taught by Hendrick Aertsz. By 1626 he had
+        settled in Arnemuiden, near Middelburg, where he died. He was a painter of
+        imaginary architecture.\",\"status\":\"Active\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0Q2H-0001-0000-0000\",\"_score\":10.128778,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\"],\"_source\":{\"date\":[{\"from\":\"1629\",\"to\":\"1697\",\"value\":\"1629
+        - before 1697\"}],\"summary\":{\"title\":\"Lodewijck van Ludick\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0Q2H-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-02B4-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500004647\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q18575764\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/51216\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/8553149844976702960002\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"}],\"@admin\":{\"processed\":1777974107068,\"sequence\":1593755,\"uid\":\"0Q2H-0001-0000-0000\",\"added\":1697553997505,\"stream\":\"tms\",\"id\":\"agent-1374\",\"source\":\"Tms\",\"uuid\":\"d785c6a0-5113-37c0-b0e2-1053ea8fb9e1\"},\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1697\",\"to\":\"1697\",\"value\":\"1697\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Ludick\",\"type\":\"primary
+        name\",\"value\":\"Lodewijck van Ludick\",\"first\":\"Lodewijck\"},{\"type\":\"sort
+        name\",\"value\":\"Ludick, Lodewijck van\"}],\"birth\":{\"date\":[{\"from\":\"1629\",\"to\":\"1629\",\"value\":\"1629\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2021-10-06\"}],\"created_formatted\":\"2021-10-06
+        11:24:14\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1633515854863,\"formatted\":\"<p>Baptised
+        in Amsterdam in November 1629, van Ludick was a landscape painter in the manner
+        of <a href=\\\"/artists/jan-both\\\">Jan Both</a>. His father was a merchant
+        and art dealer who was acquainted with a number of artists, including <a href=\\\"/artists/rembrandt\\\">Rembrandt</a>.<br
+        /><br />In 1672 van Ludick was one of the artists (Vermeer was another) asked
+        to adjudicate in a dispute over the authenticity of a group of paintings sold
+        by Hendrick van Uylenburch to the Elector of Brandenburg.</p>\",\"source\":\"TMS\",\"type\":\"web
+        text\",\"value\":\"Baptised in Amsterdam in November 1629, van Ludick was
+        a landscape painter in the manner of Jan Both. His father was a merchant and
+        art dealer who was acquainted with a number of artists, including Rembrandt.\\r\\n\\r\\nIn
+        1672 van Ludick was one of the artists (Vermeer was another) asked to adjudicate
+        in a dispute over the authenticity of a group of paintings sold by Hendrick
+        van Uylenburch to the Elector of Brandenburg.\",\"status\":\"Active\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0Q5J-0001-0000-0000\",\"_score\":10.128778,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\"],\"_source\":{\"date\":[{\"from\":\"1647\",\"to\":\"1733\",\"value\":\"1647
+        - 1733\"}],\"summary\":{\"title\":\"Jan van Huchtenburgh\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0Q5J-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-01UA-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500011172\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q324288\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/40278\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/19952504\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"}],\"@admin\":{\"processed\":1777974106903,\"sequence\":1593757,\"uid\":\"0Q5J-0001-0000-0000\",\"added\":1697553998183,\"stream\":\"tms\",\"id\":\"agent-2028\",\"source\":\"Tms\",\"uuid\":\"2cbcdee3-d238-3d2b-87ff-e3780f1fa21c\"},\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1733\",\"to\":\"1733\",\"value\":\"1733\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Huchtenburgh\",\"type\":\"primary
+        name\",\"value\":\"Jan van Huchtenburgh\",\"first\":\"Jan\"},{\"type\":\"sort
+        name\",\"value\":\"Huchtenburgh, Jan van\"}],\"birth\":{\"date\":[{\"from\":\"1647\",\"to\":\"1647\",\"value\":\"1647\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2021-10-06\"}],\"created_formatted\":\"2021-10-06
+        11:24:14\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1633515854817,\"formatted\":\"<p>Huchtenburg
+        was born in Haarlem, and probably trained by Thomas Wijck. From 1667 he worked
+        in the Gobelins factory under van der Meulen. Later he was active in Haarlem,
+        Amsterdam (where he died) and also The Hague. He was a painter of battle scenes.</p>\",\"source\":\"TMS\",\"type\":\"web
+        text\",\"value\":\"Huchtenburg was born in Haarlem, and probably trained by
+        Thomas Wijck. From 1667 he worked in the Gobelins factory under van der Meulen.
+        Later he was active in Haarlem, Amsterdam (where he died) and also The Hague.
+        He was a painter of battle scenes.\",\"status\":\"Active\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0PNB-0001-0000-0000\",\"_score\":10.128778,\"_source\":{\"date\":[{\"from\":\"1615\",\"to\":\"1655\",\"value\":\"born
+        about 1615, died after 1655\"}],\"summary\":{\"title\":\"Jacob van Mosscher\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0PNB-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-02MD-0000\"}],\"@admin\":{\"processed\":1777974108130,\"sequence\":1594176,\"uid\":\"0PNB-0001-0000-0000\",\"added\":1697553999450,\"stream\":\"tms\",\"id\":\"agent-2145\",\"source\":\"Tms\",\"uuid\":\"c1c5bbb0-6e34-31fc-a99f-026c63708fb6\"},\"death\":{\"date\":[{\"from\":\"1655\",\"to\":\"1655\",\"value\":\"1655\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Mosscher\",\"type\":\"primary
+        name\",\"value\":\"Jacob van Mosscher\",\"first\":\"Jacob\"},{\"type\":\"sort
+        name\",\"value\":\"Mosscher, Jacob van\"}],\"birth\":{\"date\":[{\"from\":\"1615\",\"to\":\"1615\",\"value\":\"1615\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"}}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0QDN-0001-0000-0000\",\"_score\":10.128778,\"_source\":{\"date\":[{\"from\":\"1620\",\"to\":\"1690\",\"value\":\"1620/21?
+        - 1690\"}],\"summary\":{\"title\":\"Abraham van Beyeren\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0QDN-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-00DM-0000\"}],\"@admin\":{\"processed\":1777974108130,\"sequence\":1594182,\"uid\":\"0QDN-0001-0000-0000\",\"added\":1697553999455,\"stream\":\"tms\",\"id\":\"agent-2146\",\"source\":\"Tms\",\"uuid\":\"e22ce8c1-a27d-330f-9514-20f0f0502024\"},\"death\":{\"date\":[{\"from\":\"1690\",\"to\":\"1690\",\"value\":\"1690\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Beyeren\",\"type\":\"primary
+        name\",\"value\":\"Abraham van Beyeren\",\"first\":\"Abraham\"},{\"type\":\"sort
+        name\",\"value\":\"Beyeren, Abraham van\"}],\"birth\":{\"date\":[{\"from\":\"1620\",\"to\":\"1620\",\"value\":\"1620\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"}}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0PYP-0001-0000-0000\",\"_score\":10.128778,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\"],\"_source\":{\"date\":[{\"from\":\"1621\",\"to\":\"1649\",\"value\":\"1621
+        - 1649\"}],\"summary\":{\"title\":\"Isack van Ostade\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0PYP-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-031J-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500013442\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q217648\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/61083\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/12574268\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"}],\"@admin\":{\"processed\":1777974108130,\"sequence\":1594199,\"uid\":\"0PYP-0001-0000-0000\",\"added\":1697553998273,\"stream\":\"tms\",\"id\":\"agent-1481\",\"source\":\"Tms\",\"uuid\":\"d3574bbe-901d-3223-a6b2-c57c0a6f0fe2\"},\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1649\",\"to\":\"1649\",\"value\":\"1649\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Ostade\",\"type\":\"primary
+        name\",\"value\":\"Isack van Ostade\",\"first\":\"Isack\"},{\"type\":\"sort
+        name\",\"value\":\"Ostade, Isack van\"}],\"birth\":{\"date\":[{\"from\":\"1621\",\"to\":\"1621\",\"value\":\"1621\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2021-10-06\"}],\"created_formatted\":\"2021-10-06
+        11:24:14\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1633515854927,\"formatted\":\"<p>Isack
+        Jansz. van Ostade was born in Haarlem and taught there by his brother <a href=\\\"/artists/adriaen-van-ostade\\\">Adriaen</a>.
+        He lived and worked in Haarlem but died young. He was a <a href=\\\"/paintings/glossary/genre\\\">genre</a>
+        and landscape painter.</p>\",\"source\":\"TMS\",\"type\":\"web text\",\"value\":\"Isack
+        Jansz. van Ostade was born in Haarlem and taught there by his brother Adriaen.
+        He lived and worked in Haarlem but died young. He was a genre and landscape
+        painter.\",\"status\":\"Active\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0PM4-0001-0000-0000\",\"_score\":10.128778,\"_source\":{\"date\":[{\"from\":\"1604\",\"to\":\"1653\",\"value\":\"about
+        1604 - 1653\"}],\"summary\":{\"title\":\"Pieter van Santvoort\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0PM4-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-03LO-0000\"}],\"@admin\":{\"processed\":1777974108618,\"sequence\":1594406,\"uid\":\"0PM4-0001-0000-0000\",\"added\":1697553998809,\"stream\":\"tms\",\"id\":\"agent-2192\",\"source\":\"Tms\",\"uuid\":\"406ca35c-fb3b-3f18-af1b-14fdc8cca93d\"},\"death\":{\"date\":[{\"from\":\"1653\",\"to\":\"1653\",\"value\":\"1653\"}],\"@entity\":\"lifecycle\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"created_formatted\":\"2008-04-10
+        15:27:33\",\"last\":\"Santvoort\",\"created\":1207837653021,\"type\":\"Non-Preferred
+        Name\",\"value\":\"Pieter Dircksz. Santvoort\",\"first\":\"Pieter Dircksz.\"},{\"middle\":\"van\",\"last\":\"Santvoort\",\"type\":\"primary
+        name\",\"value\":\"Pieter van Santvoort\",\"first\":\"Pieter\"},{\"type\":\"sort
+        name\",\"value\":\"Santvoort, Pieter van\"}],\"birth\":{\"date\":[{\"from\":\"1604\",\"to\":\"1604\",\"value\":\"1604\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"}}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0Q36-0001-0000-0000\",\"_score\":10.128778,\"_ignored\":[\"description.formatted.keyword\",\"description.__web_text.keyword\",\"note.__cataloguing_change.keyword\",\"note.formatted.keyword\"],\"_source\":{\"date\":[{\"from\":\"1597\",\"to\":\"1656\",\"value\":\"about
+        1597 - 1656\"}],\"summary\":{\"title\":\"Jacob van Velsen\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0Q36-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-045D-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://vocab.getty.edu/ulan/500020456\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://www.wikidata.org/entity/Q2352953\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"https://rkd.nl/artists/79866\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (external)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I2V-000B-0000-0000\",\"id\":\"concept-pid_(external)\",\"uuid\":\"f8295213-ba3c-341d-9ba7-6d52d5fb7370\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (external)\",\"value\":\"http://viaf.org/viaf/95806935\"}],\"note\":[{\"type\":\"slavery
+        research\",\"value\":\"to be confirmed\"},{\"formatted\":\"Life dates changed
+        from 'active 1625; died 1656' to 'about 1597-1656'\",\"source\":\"TMS\",\"type\":\"cataloguing
+        change\",\"value\":\"Life dates changed from 'active 1625; died 1656' to 'about
+        1597-1656'\",\"status\":\"Active\"}],\"role\":[{\"type\":\"NG\",\"value\":\"artist\"}],\"death\":{\"date\":[{\"from\":\"1656\",\"to\":\"1656\",\"value\":\"1656\"}],\"@entity\":\"lifecycle\"},\"birth\":{\"date\":[{\"from\":\"1597\",\"to\":\"1597\",\"value\":\"1597\"}],\"@entity\":\"lifecycle\"},\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"},\"description\":[{\"date\":[{\"from\":\"2021-10-06\"}],\"created_formatted\":\"2021-10-06
+        11:24:15\",\"author\":{\"summary\":{\"title\":\"The National Gallery (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"created\":1633515855067,\"formatted\":\"<p>Jacob
+        Jansz. van Velsen was born into a lower-class family in Delft. He may have
+        trained with Anthonie Palamedesz. although this cannot be documented. In 1625
+        he registered in the Guild of St. Luke in the\_city.\_A year later,\_he married
+        a rich widow and as a result never had to paint for a living. The couple owned
+        many houses in Delft and in the countryside, and also had a collection of
+        Chinese porcelain, curiosities, and paintings. Van Velsen died in Amsterdam.</p>\",\"source\":\"TMS\",\"type\":\"web
+        text\",\"value\":\"Jacob Jansz. van Velsen was born into a lower-class family
+        in Delft. He may have trained with Anthonie Palamedesz. although this cannot
+        be documented. In 1625 he registered in the Guild of St. Luke in the\_city.\_A
+        year later,\_he married a rich widow and as a result never had to paint for
+        a living. The couple owned many houses in Delft and in the countryside, and
+        also had a collection of Chinese porcelain, curiosities, and paintings. Van
+        Velsen died in Amsterdam.\",\"status\":\"Active\"}],\"@admin\":{\"processed\":1777974108700,\"sequence\":1594480,\"uid\":\"0Q36-0001-0000-0000\",\"added\":1697554000127,\"stream\":\"tms\",\"id\":\"agent-1677\",\"source\":\"Tms\",\"uuid\":\"765e11d6-690d-3fda-9695-ba153ca662c2\"},\"bibliography\":[{\"summary\":{\"title\":\"K\xFCnstler-Inventare\"},\"@link\":{\"details\":{\"illustrated\":false,\"page\":\"875-7,
+        885-6\",\"type\":\"Key bibliography\"}},\"@admin\":{\"uid\":\"0DVC-0008-0000-0000\",\"id\":\"publication-445\",\"uuid\":\"9bf2b1ac-d003-3592-ba8f-05c35aa4ff4a\"},\"@datatype\":{\"actual\":\"Monograph\",\"sub\":[\"tms\"],\"equivalents\":[{\"@admin\":{\"id\":\"concept-monograph\",\"uuid\":\"adda9f35-d664-3c9d-95f8-43e2737b77c2\",\"status\":\"public\"},\"@entity\":\"reference\"}],\"base\":\"publication\"},\"@entity\":\"reference\"}],\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Velsen\",\"type\":\"primary
+        name\",\"value\":\"Jacob van Velsen\",\"first\":\"Jacob\"},{\"type\":\"sort
+        name\",\"value\":\"Velsen, Jacob van\"}]}},{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0RF9-0001-0000-0000\",\"_score\":10.128778,\"_source\":{\"summary\":{\"title\":\"Mr
+        van Eegen\"},\"identifier\":[{\"type\":\"PID\",\"value\":\"0RF9-0001-0000-0000\"},{\"equivalents\":[{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"PID
+        (NG alternative)\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300387580\",\"type\":\"AAT\",\"value\":\"persistent
+        identifiers\"}],\"@admin\":{\"uid\":\"0I3T-000B-0000-0000\",\"id\":\"concept-pid_(ng_alternative)\",\"uuid\":\"290420fc-0c85-3c90-91ed-b9a81a2f930f\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"PID
+        (NG alternative)\",\"value\":\"001-015T-0000\"}],\"@admin\":{\"processed\":1777974108700,\"sequence\":1594532,\"uid\":\"0RF9-0001-0000-0000\",\"added\":1697554000154,\"stream\":\"tms\",\"id\":\"agent-4707\",\"source\":\"Tms\",\"uuid\":\"2f4f30f9-c62c-3c41-8313-c8de0436f325\"},\"legal\":{\"rights\":[{\"details\":\"To
+        encourage the use and reuse of the National Gallery's collection data, they
+        are released under the following dedications and licences:\\r\\nStructured
+        data (as opposed to narrative texts) are released under a Creative Commons
+        Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\\r\\nDescriptions,
+        notes and all other narrative text content are licensed under a Creative Commons
+        Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\\r\\nImages
+        are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0
+        licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.\",\"type\":\"use
+        of images and metadata\"}]},\"name\":[{\"middle\":\"van\",\"last\":\"Eegen\",\"title\":\"Mr\",\"type\":\"primary
+        name\",\"value\":\"Mr van Eegen\"},{\"type\":\"sort name\",\"value\":\"Eegen
+        van Mr\"}],\"@datatype\":{\"actual\":\"Individual\",\"base\":\"agent\"}}}]}}"
+    headers:
+      Access-Control-Allow-Headers:
+      - origin, x-requested-with, content-type, authorization
+      Access-Control-Allow-Methods:
+      - GET, POST, OPTIONS
+      Access-Control-Allow-Origin:
+      - '*'
+      Connection:
+      - close
+      Date:
+      - Sun, 07 Jun 2026 18:28:31 GMT
+      Server:
+      - Apache/2.4.67 (Win64) OpenSSL/3.6.2
+      Vary:
+      - Origin
+      X-elastic-product:
+      - Elasticsearch
+      content-length:
+      - '63105'
+      content-type:
+      - application/json; charset=UTF-8
+    status:
+      code: 200
+      message: OK
+version: 1

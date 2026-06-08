@@ -1,0 +1,343 @@
+{
+  "summary": {
+    "title": "Würzburger Residenz"
+  },
+  "identifier": [
+    {
+      "type": "PID",
+      "value": "0G6M-0008-0000-0000"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (external)",
+      "value": "https://www.wikidata.org/entity/Q156316"
+    }
+  ],
+  "parent": [
+    {
+      "summary": {
+        "title": "Würzburg"
+      },
+      "@link": {
+        "sort": 1
+      },
+      "@admin": {
+        "uid": "0G3E-0008-0000-0000",
+        "id": "place-40482",
+        "uuid": "b3b48099-2439-3593-a820-76568281ee3f"
+      },
+      "@datatype": {
+        "actual": "place",
+        "sub": [
+          "concept"
+        ],
+        "equivalents": [
+          {
+            "@admin": {
+              "id": "concept-place",
+              "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+              "status": "unavailable"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "base": "place"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974167926,
+    "sequence": 1623656,
+    "uid": "0G6M-0008-0000-0000",
+    "added": 1697554020102,
+    "stream": "tms",
+    "id": "place-38719",
+    "source": "Tms",
+    "uuid": "88a83665-2cf3-35d5-bf03-3271bb0d67f4"
+  },
+  "@hierarch": [
+    {
+      "summary": {
+        "title": "Places"
+      },
+      "@admin": {
+        "uid": "0G6X-0008-0000-0000",
+        "id": "place-39196",
+        "uuid": "fa03f915-016c-3c8a-b55e-d03934f16408"
+      },
+      "@datatype": {
+        "actual": "place",
+        "sub": [
+          "concept"
+        ],
+        "equivalents": [
+          {
+            "@admin": {
+              "id": "concept-place",
+              "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+              "status": "unavailable"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "base": "place"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "hierarchy": [
+    {
+      "created_formatted": "2019-03-28 15:00:39",
+      "level": 4,
+      "created": 1553785239018,
+      "id": 49273,
+      "value": "AUY.AQR.AAO.ABC.AAA",
+      "primary": true
+    }
+  ],
+  "thesaurus": {
+    "name": [
+      {
+        "value": "Places"
+      }
+    ],
+    "@entity": "literal"
+  },
+  "coordinates": [
+    {
+      "system": "latitude/longitude",
+      "latitude": {
+        "value": 49.7928
+      },
+      "format": "decimal degrees",
+      "value": "49.7928,9.9389",
+      "longitude": {
+        "value": 9.9389
+      }
+    },
+    {
+      "system": "latitude/longitude",
+      "latitude": {
+        "value": "49° 47′ 34.0000″",
+        "direction": "N"
+      },
+      "format": "degrees minutes seconds",
+      "value": "49° 47′ 34.0000″ N , 9° 56′ 20.0000″ E",
+      "longitude": {
+        "value": "9° 56′ 20.0000″",
+        "direction": "E"
+      }
+    },
+    {
+      "system": "latitude/longitude",
+      "format": "WKT",
+      "value": "POINT(9.938900 49.792800)"
+    }
+  ],
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "@datatype": {
+    "actual": "place",
+    "sub": [
+      "concept"
+    ],
+    "base": "place"
+  },
+  "term": [
+    {
+      "@admin": {
+        "created": 1507893842733,
+        "id": "203470",
+        "uuid": "c91df77e-834f-3636-863c-8d07214e4a05"
+      },
+      "type": "Descriptor",
+      "value": "Würzburger Residenz",
+      "@entity": "literal",
+      "primary": true
+    }
+  ],
+  "@hierarchy": [
+    [
+      {
+        "summary": {
+          "title": "Places"
+        },
+        "@admin": {
+          "uid": "0G6X-0008-0000-0000",
+          "id": "place-39196",
+          "uuid": "fa03f915-016c-3c8a-b55e-d03934f16408"
+        },
+        "@datatype": {
+          "actual": "place",
+          "sub": [
+            "concept"
+          ],
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-place",
+                "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "place"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "Europe"
+        },
+        "@admin": {
+          "uid": "0FRT-0008-0000-0000",
+          "id": "place-37765",
+          "uuid": "f8c4f126-0b5e-309b-b1d1-49572ce30e25"
+        },
+        "@datatype": {
+          "actual": "place",
+          "sub": [
+            "concept"
+          ],
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-place",
+                "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "place"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "Germany"
+        },
+        "@admin": {
+          "uid": "0FXW-0008-0000-0000",
+          "id": "place-35867",
+          "uuid": "59211c4a-b8d2-39a4-b229-f5a6f5b3b245"
+        },
+        "@datatype": {
+          "actual": "place",
+          "sub": [
+            "concept"
+          ],
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-place",
+                "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "place"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "Würzburg"
+        },
+        "@admin": {
+          "uid": "0G3E-0008-0000-0000",
+          "id": "place-40482",
+          "uuid": "b3b48099-2439-3593-a820-76568281ee3f"
+        },
+        "@datatype": {
+          "actual": "place",
+          "sub": [
+            "concept"
+          ],
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-place",
+                "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "place"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "Würzburger Residenz"
+        },
+        "@admin": {
+          "uid": "0G6M-0008-0000-0000",
+          "id": "place-38719",
+          "uuid": "88a83665-2cf3-35d5-bf03-3271bb0d67f4"
+        },
+        "@datatype": {
+          "actual": "place",
+          "sub": [
+            "concept"
+          ],
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-place",
+                "uuid": "af8ee8b4-cbd1-3401-b336-a97085914cd1",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "place"
+        },
+        "@entity": "reference"
+      }
+    ]
+  ]
+}

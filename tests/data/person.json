@@ -1,0 +1,476 @@
+{
+  "date": [
+    {
+      "from": "1853",
+      "to": "1890",
+      "value": "1853 - 1890"
+    }
+  ],
+  "summary": {
+    "title": "Vincent van Gogh"
+  },
+  "identifier": [
+    {
+      "type": "PID",
+      "value": "0QCE-0001-0000-0000"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (NG alternative)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I3T-000B-0000-0000",
+            "id": "concept-pid_(ng_alternative)",
+            "uuid": "290420fc-0c85-3c90-91ed-b9a81a2f930f"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        },
+        {
+          "summary": {
+            "title": "PID (NG alternative)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I3T-000B-0000-0000",
+            "id": "concept-pid_(ng_alternative)",
+            "uuid": "290420fc-0c85-3c90-91ed-b9a81a2f930f"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (NG alternative)",
+      "value": "001-01K1-0000"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        },
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (external)",
+      "value": "http://vocab.getty.edu/ulan/500115588"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        },
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (external)",
+      "value": "https://www.wikidata.org/entity/Q5582"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        },
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (external)",
+      "value": "https://rkd.nl/artists/32439"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        },
+        {
+          "summary": {
+            "title": "PID (external)"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300387580",
+              "type": "AAT",
+              "value": "persistent identifiers"
+            }
+          ],
+          "@admin": {
+            "uid": "0I2V-000B-0000-0000",
+            "id": "concept-pid_(external)",
+            "uuid": "f8295213-ba3c-341d-9ba7-6d52d5fb7370"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "PID (external)",
+      "value": "http://viaf.org/viaf/9854560"
+    }
+  ],
+  "note": [
+    {
+      "type": "slavery research",
+      "value": "to be confirmed"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974111879,
+    "sequence": 1596039,
+    "uid": "0QCE-0001-0000-0000",
+    "added": 1697554000575,
+    "stream": "tms",
+    "id": "agent-1270",
+    "source": "Tms",
+    "uuid": "19cd05f7-6896-32b2-b81a-8931ad0f928d"
+  },
+  "role": [
+    {
+      "type": "NG",
+      "value": "artist"
+    }
+  ],
+  "death": {
+    "date": [
+      {
+        "from": "1890",
+        "to": "1890",
+        "value": "1890"
+      }
+    ],
+    "@entity": "lifecycle"
+  },
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "name": [
+    {
+      "middle": "van",
+      "last": "Gogh",
+      "type": "primary name",
+      "value": "Vincent van Gogh",
+      "first": "Vincent"
+    },
+    {
+      "type": "sort name",
+      "value": "Gogh, Vincent van"
+    }
+  ],
+  "birth": {
+    "date": [
+      {
+        "from": "1853",
+        "to": "1853",
+        "value": "1853"
+      }
+    ],
+    "@entity": "lifecycle"
+  },
+  "@datatype": {
+    "actual": "Individual",
+    "base": "agent"
+  },
+  "description": [
+    {
+      "date": [
+        {
+          "from": "2021-10-06"
+        }
+      ],
+      "created_formatted": "2021-10-06 11:24:14",
+      "author": {
+        "summary": {
+          "title": "The National Gallery (London)"
+        },
+        "@admin": {
+          "uid": "0P5X-0001-0000-0000",
+          "id": "agent-652",
+          "uuid": "511c84f0-a664-39ab-b653-6db7fc6c345e"
+        },
+        "@datatype": {
+          "actual": "Organisation",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-organisation",
+                "uuid": "2bd185c5-a9b6-36ee-8bea-3dc3251b28e7",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "agent"
+        },
+        "@entity": "reference"
+      },
+      "created": 1633515854787,
+      "formatted": "<div><p>Van Gogh is today one of the most popular of the <a href=\"/paintings/glossary/post-impressionism\">Post-Impressionist</a> painters, although he was not widely appreciated during his lifetime. He is now famed for the great vitality of his works which are characterised by expressive and emotive use of brilliant colour and energetic application of <a href=\"/paintings/glossary/impasto\">impastoed </a>paint. The traumas of his life, documented in his letters, have tended to dominate and distort modern perceptions of his art.</p></div><p>Van Gogh was born in Holland, the son of a pastor; he travelled to London in 1873, and first visited Paris in 1874. Over the next decade he was employed in various ways, including as a lay preacher. By 1883 he had started painting, and in 1885-6 he attended the academy in Antwerp where he was impressed by Japanese prints and by the work of <a href=\"/artists/peter-paul-rubens\">Rubens</a>. On his return to Paris in 1886 he met artists such as <a href=\"/artists/hilaire-germain-edgar-degas\">Degas</a>, <a href=\"/artists/paul-gauguin\">Gauguin</a> and <a href=\"/artists/georges-seurat\">Seurat</a>, and as a result lightened the colours he used.<br /><br />In 1888 Van Gogh settled in Arles in Provence, where he was visited by Gauguin and painted his now famous series of 'Sunflowers'. In the following year a nervous breakdown brought him to a sanatorium at St Remy; it was at this period that he executed <a href=\"/paintings/vincent-van-gogh-a-wheatfield-with-cypresses\">'A Wheatfield, with Cypresses'</a>. In 1890, suffering from a new bout of depression, he shot himself in the chest and died two days later.</p>",
+      "source": "TMS",
+      "type": "web text",
+      "value": "Van Gogh is today one of the most popular of the Post-Impressionist painters, although he was not widely appreciated during his lifetime. He is now famed for the great vitality of his works which are characterised by expressive and emotive use of brilliant colour and energetic application of impastoed paint. The traumas of his life, documented in his letters, have tended to dominate and distort modern perceptions of his art.Van Gogh was born in Holland, the son of a pastor; he travelled to London in 1873, and first visited Paris in 1874. Over the next decade he was employed in various ways, including as a lay preacher. By 1883 he had started painting, and in 1885-6 he attended the academy in Antwerp where he was impressed by Japanese prints and by the work of Rubens. On his return to Paris in 1886 he met artists such as Degas, Gauguin and Seurat, and as a result lightened the colours he used.\r\n\r\nIn 1888 Van Gogh settled in Arles in Provence, where he was visited by Gauguin and painted his now famous series of 'Sunflowers'. In the following year a nervous breakdown brought him to a sanatorium at St Remy; it was at this period that he executed 'A Wheatfield, with Cypresses'. In 1890, suffering from a new bout of depression, he shot himself in the chest and died two days later.",
+      "status": "Active"
+    }
+  ]
+}

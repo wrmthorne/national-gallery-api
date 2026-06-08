@@ -1,0 +1,120 @@
+{
+  "summary": {
+    "title": "3m4LswPWpbw"
+  },
+  "identifier": [
+    {
+      "type": "rendition number",
+      "value": "R.2019-527"
+    },
+    {
+      "type": "PID",
+      "value": "0EOD-000A-0000-0000"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "system id"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300456630",
+              "type": "AAT",
+              "value": "system names"
+            }
+          ],
+          "@admin": {
+            "uid": "0I0W-000B-0000-0000",
+            "id": "concept-system_id",
+            "uuid": "925f65e9-0a35-3cb5-acdf-5da40667b154"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "system id",
+      "value": "37377"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974200559,
+    "sequence": 1642728,
+    "uid": "0EOD-000A-0000-0000",
+    "added": 1697554282543,
+    "stream": "tms",
+    "id": "media-37377",
+    "source": "Tms",
+    "uuid": "e29e2fc4-701c-3a7a-b30c-c7a8e9fb134b"
+  },
+  "access": {
+    "item": {
+      "public_approved": true
+    }
+  },
+  "@processed": {
+    "original": {
+      "resizable": true,
+      "absolute": true,
+      "@type": "video",
+      "format": "html",
+      "modified": 0,
+      "location": "https://youtu.be/3m4LswPWpbw",
+      "measurements": {
+        "filesize": {
+          "units": "bytes",
+          "value": 1118547
+        }
+      }
+    }
+  },
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "@datatype": {
+    "actual": "video",
+    "base": "media"
+  },
+  "source": {
+    "resizable": true,
+    "@type": "video",
+    "format": "html",
+    "modified": 0,
+    "@location": {
+      "filename": "media-37377.html",
+      "public": true,
+      "type": "http",
+      "value": "https://youtu.be/3m4LswPWpbw"
+    },
+    "measurements": {
+      "filesize": {
+        "units": "bytes",
+        "value": 1118547
+      }
+    }
+  },
+  "title": [
+    {
+      "type": "caption",
+      "value": "Moroni, 'The Tailor'"
+    }
+  ]
+}

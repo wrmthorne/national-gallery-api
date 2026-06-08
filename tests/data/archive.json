@@ -1,0 +1,178 @@
+{
+  "summary": {
+    "title": "Letter from William Boxall to Hart"
+  },
+  "identifier": [
+    {
+      "type": "reference number",
+      "value": "NGA1/1/48/10",
+      "primary": true
+    },
+    {
+      "type": "PID",
+      "value": "0DEO-0003-0000-0000"
+    }
+  ],
+  "parent": [
+    {
+      "summary": {
+        "title": "William Boxall correspondence"
+      },
+      "@admin": {
+        "uid": "0EBK-0003-0000-0000",
+        "id": "R35650",
+        "uuid": "d2970ee1-941f-37d0-b880-47ec634286d8"
+      },
+      "@datatype": {
+        "actual": "Component",
+        "base": "archive"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "access": {
+    "status": "Open"
+  },
+  "level": {
+    "value": "Item"
+  },
+  "@datatype": {
+    "actual": "Component",
+    "base": "archive"
+  },
+  "description": [
+    {
+      "value": "Agreeing that members of the Committee need only indicate well known and desirable pictures without the need for the pictures to be seen."
+    }
+  ],
+  "language": [
+    {
+      "code": "English",
+      "value": "English"
+    }
+  ],
+  "repository": [
+    {
+      "name": [
+        {
+          "value": "GB 345 National Gallery Archive"
+        }
+      ]
+    }
+  ],
+  "title": [
+    {
+      "value": "Letter from William Boxall to Hart",
+      "primary": true
+    }
+  ],
+  "@admin": {
+    "processed": 1697629700019,
+    "sequence": 458614,
+    "uid": "0DEO-0003-0000-0000",
+    "added": 1697621663268,
+    "stream": "calm",
+    "id": "R36094",
+    "source": "National Gallery CALM Web Services",
+    "uuid": "57cc2eee-e39d-3cf6-8e3f-fd1d610dca63"
+  },
+  "@hierarch": [
+    {
+      "summary": {
+        "title": "Sir William Boxall Papers"
+      },
+      "@admin": {
+        "uid": "0EDZ-0003-0000-0000",
+        "id": "R67032",
+        "uuid": "f3c5e042-abaf-3cdd-b379-7fb1b364e18d"
+      },
+      "@datatype": {
+        "actual": "Collection",
+        "base": "archive"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "@hierarchy": [
+    [
+      {
+        "summary": {
+          "title": "Sir William Boxall Papers"
+        },
+        "@admin": {
+          "uid": "0EDZ-0003-0000-0000",
+          "id": "R67032",
+          "uuid": "f3c5e042-abaf-3cdd-b379-7fb1b364e18d"
+        },
+        "@datatype": {
+          "actual": "Collection",
+          "base": "archive"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "William Boxall correspondence"
+        },
+        "@admin": {
+          "uid": "0EFB-0003-0000-0000",
+          "id": "R57874",
+          "uuid": "5c1f1c2b-f3fc-3b58-976c-fa69b0f427a0"
+        },
+        "@datatype": {
+          "actual": "Component",
+          "base": "archive"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "William Boxall correspondence"
+        },
+        "@admin": {
+          "uid": "0EBK-0003-0000-0000",
+          "id": "R35650",
+          "uuid": "d2970ee1-941f-37d0-b880-47ec634286d8"
+        },
+        "@datatype": {
+          "actual": "Component",
+          "base": "archive"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "Letter from William Boxall to Hart"
+        },
+        "@admin": {
+          "uid": "0DEO-0003-0000-0000",
+          "id": "R36094",
+          "uuid": "57cc2eee-e39d-3cf6-8e3f-fd1d610dca63"
+        },
+        "@datatype": {
+          "actual": "Component",
+          "base": "archive"
+        },
+        "@entity": "reference"
+      }
+    ]
+  ],
+  "creation": {
+    "date": [
+      {
+        "value": "15 Nov 1870"
+      }
+    ]
+  },
+  "measurements": {
+    "extent": "2 pages"
+  }
+}

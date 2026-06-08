@@ -1,0 +1,176 @@
+{
+  "date": [
+    {
+      "from": "2014-04-30",
+      "to": "2014-09-21",
+      "value": "30 April 2014 - 21 September 2014"
+    }
+  ],
+  "summary": {
+    "title": "Loan to Kingston Lacy (2014)"
+  },
+  "identifier": [
+    {
+      "type": "exhibition id lo",
+      "value": "2082"
+    },
+    {
+      "type": "PID",
+      "value": "09V1-000B-0000-0000"
+    },
+    {
+      "type": "exhibition mnemonic lo",
+      "value": "LO_2013_091"
+    },
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "system id"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300456630",
+              "type": "AAT",
+              "value": "system names"
+            }
+          ],
+          "@admin": {
+            "uid": "0I0W-000B-0000-0000",
+            "id": "concept-system_id",
+            "uuid": "925f65e9-0a35-3cb5-acdf-5da40667b154"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "system id",
+      "value": "2082"
+    }
+  ],
+  "venue": [
+    {
+      "summary": {
+        "title": "Kingston Lacy (National Trust)"
+      },
+      "@link": {
+        "date": [
+          {
+            "from": "2014-04-30",
+            "to": "2014-09-21",
+            "value": "2014-04-30 to 2014-09-21"
+          }
+        ],
+        "title": [
+          {
+            "type": "exhibition title at venue",
+            "value": "Loan to Kingston Lacy (2014)"
+          }
+        ],
+        "status": false
+      },
+      "@admin": {
+        "uid": "0SUW-0001-0000-0000",
+        "id": "agent-6240",
+        "uuid": "45c88cba-d82d-3cea-9521-2648823df870"
+      },
+      "@datatype": {
+        "actual": "Organisation",
+        "equivalents": [
+          {
+            "@admin": {
+              "id": "concept-organisation",
+              "uuid": "2bd185c5-a9b6-36ee-8bea-3dc3251b28e7",
+              "status": "unavailable"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "base": "agent"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "agent": [
+    {
+      "summary": {
+        "title": "Kingston Lacy (National Trust)"
+      },
+      "@link": {
+        "role": [
+          {
+            "value": "Exhibition Organiser"
+          }
+        ],
+        "public": true,
+        "historical": false
+      },
+      "@admin": {
+        "uid": "0SUW-0001-0000-0000",
+        "id": "agent-6240",
+        "uuid": "45c88cba-d82d-3cea-9521-2648823df870"
+      },
+      "@datatype": {
+        "actual": "Organisation",
+        "equivalents": [
+          {
+            "@admin": {
+              "id": "concept-organisation",
+              "uuid": "2bd185c5-a9b6-36ee-8bea-3dc3251b28e7",
+              "status": "unavailable"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "base": "agent"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974208815,
+    "sequence": 1647599,
+    "uid": "09V1-000B-0000-0000",
+    "added": 1731927069376,
+    "stream": "tms",
+    "id": "exhibition-2082",
+    "source": "Tms",
+    "uuid": "48c516d7-7414-3019-bc4a-5977f8670c57"
+  },
+  "access": {
+    "item": {
+      "publish_on_intranet": "Yes",
+      "public_approved": true
+    }
+  },
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "@datatype": {
+    "sub": [
+      "3rd Party Exhibition (Loans Out)"
+    ],
+    "base": "exhibition"
+  },
+  "status": {
+    "value": "Agreed request (at least partially)"
+  }
+}

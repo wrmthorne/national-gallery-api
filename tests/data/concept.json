@@ -1,0 +1,278 @@
+{
+  "summary": {
+    "title": "pomegranate"
+  },
+  "identifier": [
+    {
+      "type": "PID",
+      "value": "0EUP-0008-0000-0000"
+    }
+  ],
+  "parent": [
+    {
+      "summary": {
+        "title": "fruit"
+      },
+      "@link": {
+        "sort": 11
+      },
+      "@admin": {
+        "uid": "0EN6-0008-0000-0000",
+        "id": "concept-35795",
+        "uuid": "5621e612-276f-382b-a5c9-16d3ad198741"
+      },
+      "@datatype": {
+        "actual": "thesaurus",
+        "equivalents": [
+          {
+            "@admin": {
+              "id": "concept-thesaurus",
+              "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+              "status": "unavailable"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "base": "concept"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974163864,
+    "sequence": 1621620,
+    "uid": "0EUP-0008-0000-0000",
+    "added": 1697554017498,
+    "stream": "tms",
+    "id": "concept-35801",
+    "source": "Tms",
+    "uuid": "92e6bd53-04bb-3a3b-9642-971a0a026057"
+  },
+  "@hierarch": [
+    {
+      "summary": {
+        "title": "Keywords"
+      },
+      "@admin": {
+        "uid": "0F5Q-0008-0000-0000",
+        "id": "concept-39190",
+        "uuid": "41161f27-6198-3b4d-95ae-aecf6572bdbe"
+      },
+      "@datatype": {
+        "actual": "thesaurus",
+        "equivalents": [
+          {
+            "@admin": {
+              "id": "concept-thesaurus",
+              "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+              "status": "unavailable"
+            },
+            "@entity": "reference"
+          }
+        ],
+        "base": "concept"
+      },
+      "@entity": "reference"
+    }
+  ],
+  "hierarchy": [
+    {
+      "created_formatted": "2018-07-20 10:55:04",
+      "level": 5,
+      "created": 1532080504837,
+      "id": 44346,
+      "value": "AUV.AAF.AAD.AAT.AAC.AAF",
+      "primary": true
+    }
+  ],
+  "thesaurus": {
+    "name": [
+      {
+        "value": "Keywords"
+      }
+    ],
+    "@entity": "literal"
+  },
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "name": [
+    {
+      "value": "pomegranate"
+    }
+  ],
+  "@datatype": {
+    "actual": "thesaurus",
+    "base": "concept"
+  },
+  "term": [
+    {
+      "created_formatted": "2017-10-13 12:22:27",
+      "created": 1507893747747,
+      "id": 200552,
+      "type": "Descriptor",
+      "value": "pomegranate",
+      "@entity": "literal",
+      "primary": true
+    }
+  ],
+  "@hierarchy": [
+    [
+      {
+        "summary": {
+          "title": "Keywords"
+        },
+        "@admin": {
+          "uid": "0F5Q-0008-0000-0000",
+          "id": "concept-39190",
+          "uuid": "41161f27-6198-3b4d-95ae-aecf6572bdbe"
+        },
+        "@datatype": {
+          "actual": "thesaurus",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-thesaurus",
+                "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "subject matter"
+        },
+        "@admin": {
+          "uid": "0FFO-0008-0000-0000",
+          "id": "concept-39206",
+          "uuid": "f10b9ed9-1a75-313e-817f-3614c4178ef2"
+        },
+        "@datatype": {
+          "actual": "thesaurus",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-thesaurus",
+                "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "nature"
+        },
+        "@admin": {
+          "uid": "0F7E-0008-0000-0000",
+          "id": "concept-39210",
+          "uuid": "4ca5e52a-4cf8-32f2-b50c-2e18a2dbc0c6"
+        },
+        "@datatype": {
+          "actual": "thesaurus",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-thesaurus",
+                "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "plants"
+        },
+        "@admin": {
+          "uid": "0EWM-0008-0000-0000",
+          "id": "concept-35640",
+          "uuid": "645aab0e-cdb2-3e0f-8838-ac228d951ba5"
+        },
+        "@datatype": {
+          "actual": "thesaurus",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-thesaurus",
+                "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "fruit"
+        },
+        "@admin": {
+          "uid": "0EN6-0008-0000-0000",
+          "id": "concept-35795",
+          "uuid": "5621e612-276f-382b-a5c9-16d3ad198741"
+        },
+        "@datatype": {
+          "actual": "thesaurus",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-thesaurus",
+                "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      },
+      {
+        "summary": {
+          "title": "pomegranate"
+        },
+        "@admin": {
+          "uid": "0EUP-0008-0000-0000",
+          "id": "concept-35801",
+          "uuid": "92e6bd53-04bb-3a3b-9642-971a0a026057"
+        },
+        "@datatype": {
+          "actual": "thesaurus",
+          "equivalents": [
+            {
+              "@admin": {
+                "id": "concept-thesaurus",
+                "uuid": "f43fd0f4-55b4-3b40-848f-447f65fd6444",
+                "status": "unavailable"
+              },
+              "@entity": "reference"
+            }
+          ],
+          "base": "concept"
+        },
+        "@entity": "reference"
+      }
+    ]
+  ]
+}

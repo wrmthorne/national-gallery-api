@@ -1,0 +1,265 @@
+{
+  "summary": {
+    "title": "BSL-described paintings"
+  },
+  "identifier": [
+    {
+      "type": "PID",
+      "value": "0I4A-000B-0000-0000"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974105385,
+    "sequence": 1593317,
+    "uid": "0I4A-000B-0000-0000",
+    "added": 1752602456243,
+    "stream": "tms",
+    "id": "package-297986",
+    "source": "Tms",
+    "uuid": "9206cb29-e227-3d53-b84a-9ca98c8e07b9"
+  },
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "name": {
+    "value": "BSL-described paintings"
+  },
+  "@datatype": {
+    "actual": "package",
+    "base": "package"
+  },
+  "description": {
+    "value": "Paintings with an introductory video in BSL"
+  },
+  "object": [
+    {
+      "summary": {
+        "title": "The Water-Lily Pond"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0CLG-0001-0000-0000",
+        "id": "object-1576",
+        "uuid": "70bb8c3c-e544-3c36-8aa6-b607505c3358"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Fighting Temeraire"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0D2T-0001-0000-0000",
+        "id": "object-1659",
+        "uuid": "9127dcdd-772a-3939-8845-7370f4d14f78"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Stonemason's Yard"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0CUB-0001-0000-0000",
+        "id": "object-1672",
+        "uuid": "5c592a30-5444-3275-a4ad-cd9b527f1784"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Supper at Emmaus"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0D1M-0001-0000-0000",
+        "id": "object-1673",
+        "uuid": "35ea2881-9ecf-37d1-b3f9-a8a01a076db1"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "Self Portrait at the Age of 34"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0CRJ-0001-0000-0000",
+        "id": "object-1690",
+        "uuid": "edeb08a1-9c2c-3298-9da9-86bbb6800129"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "A Young Woman standing at a Virginal"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0CVV-0001-0000-0000",
+        "id": "object-1691",
+        "uuid": "72f1ad0e-2b54-3185-bd7a-95e3a0078807"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "Venus and Mars"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0DE1-0001-0000-0000",
+        "id": "object-1719",
+        "uuid": "9bcf3929-e8c3-3860-ba1b-8579df6a3fe5"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Courtyard of a House in Delft"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0DGJ-0001-0000-0000",
+        "id": "object-1738",
+        "uuid": "764474ec-ce2a-357e-badc-d136136141e6"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Toilet of Venus ('The Rokeby Venus')"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0CP0-0001-0000-0000",
+        "id": "object-1787",
+        "uuid": "41419a41-f49d-39dd-8b09-d830b28fb50b"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Wilton Diptych"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0E6K-0001-0000-0000",
+        "id": "object-3694",
+        "uuid": "f3c18cf7-e898-3b62-bab5-9a762aea044a"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Hay Wain"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0FV6-0001-0000-0000",
+        "id": "object-5387",
+        "uuid": "34de76e6-b792-3ff1-bc69-6b7969ebe585"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "The Umbrellas"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0GHM-0001-0000-0000",
+        "id": "object-6110",
+        "uuid": "25a8b311-eb7a-3779-b00c-22fdf61c76c5"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "Sunflowers"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0GE6-0001-0000-0000",
+        "id": "object-6183",
+        "uuid": "c883d766-601f-389b-9112-6a6d79018022"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    },
+    {
+      "summary": {
+        "title": "Self Portrait as Saint Catherine of Alexandria"
+      },
+      "@link": {},
+      "@admin": {
+        "uid": "0O4Z-0001-0000-0000",
+        "id": "object-18513",
+        "uuid": "b0c5cf10-b92c-32f2-b49d-a01f65808ddc"
+      },
+      "@datatype": {
+        "virtual": false,
+        "base": "object"
+      },
+      "@entity": "reference"
+    }
+  ]
+}

@@ -1,0 +1,83 @@
+{
+  "summary": {
+    "title": "Room 37"
+  },
+  "identifier": [
+    {
+      "equivalents": [
+        {
+          "summary": {
+            "title": "system id"
+          },
+          "identifier": [
+            {
+              "id": "https://vocab.getty.edu/aat/300456630",
+              "type": "AAT",
+              "value": "system names"
+            }
+          ],
+          "@admin": {
+            "uid": "0I0W-000B-0000-0000",
+            "id": "concept-system_id",
+            "uuid": "925f65e9-0a35-3cb5-acdf-5da40667b154"
+          },
+          "@datatype": {
+            "actual": "equivalents",
+            "equivalents": [
+              {
+                "@admin": {
+                  "id": "concept-equivalents",
+                  "uuid": "ff84d33a-1072-38d2-953b-5332535ba652",
+                  "status": "unavailable"
+                },
+                "@entity": "reference"
+              }
+            ],
+            "base": "concept"
+          },
+          "@entity": "reference"
+        }
+      ],
+      "type": "system id",
+      "value": "89"
+    },
+    {
+      "type": "PID",
+      "value": "0U9Z-0001-0000-0000"
+    }
+  ],
+  "@admin": {
+    "processed": 1777974131934,
+    "sequence": 1607063,
+    "uid": "0U9Z-0001-0000-0000",
+    "added": 1697554007583,
+    "stream": "tms",
+    "id": "location-89",
+    "source": "Tms",
+    "uuid": "163f9705-d500-3416-9de0-fb0b4e9c3e84"
+  },
+  "route": [
+    {
+      "value": "C"
+    }
+  ],
+  "legal": {
+    "rights": [
+      {
+        "details": "To encourage the use and reuse of the National Gallery's collection data, they are released under the following dedications and licences:\r\nStructured data (as opposed to narrative texts) are released under a Creative Commons Zero dedication (CC0): https://creativecommons.org/publicdomain/zero/1.0/.\r\nDescriptions, notes and all other narrative text content are licensed under a Creative Commons Attribution 4.0 licence (CC BY): https://creativecommons.org/licenses/by/4.0/.\r\nImages are licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 4.0 licence (CC BY-NC-ND): https://creativecommons.org/licenses/by-nc-nd/4.0/.",
+        "type": "use of images and metadata"
+      }
+    ]
+  },
+  "name": [
+    {
+      "value": "Room 37"
+    }
+  ],
+  "@datatype": {
+    "base": "location"
+  },
+  "historical": false,
+  "floor": 1,
+  "location_on_display": true
+}
