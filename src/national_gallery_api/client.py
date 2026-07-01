@@ -87,6 +87,11 @@ def _page_body(
 _UNSET: Any = object()
 
 
+def _normalise_ng_number(ng_number: str) -> str:
+    """Canonicalise a user-supplied NG number to the stored form (e.g. ``"ng 3863"`` -> ``"NG3863"``)."""
+    return ng_number.replace(" ", "").upper()
+
+
 class _SyncResource[E: Entity]:
     def __init__(
         self, client: NationalGallery, model: type[E], base: EntityType, default_actual: str | None = None
@@ -126,10 +131,24 @@ class _SyncResource[E: Entity]:
                 return
 
 
+class _SyncWorks(_SyncResource[Work]):
+    def get_by_ng_number(self, ng_number: str) -> Work:
+        """Fetch the single work bearing the given NG (object) number, e.g. ``"NG3863"``.
+
+        Raises :class:`NotFoundError` if no work has that number.
+        """
+        value = _normalise_ng_number(ng_number)
+        payload = self._client.search({"query": {"term": {"identifier.value": value}}, "size": 1})
+        items = self._model.from_response(payload)
+        if not items:
+            raise NotFoundError(f"No work with NG number {ng_number!r}")
+        return items[0]
+
+
 class NationalGallery:
     people: _SyncResource[Person]
     organisations: _SyncResource[Organisation]
-    works: _SyncResource[Work]
+    works: _SyncWorks
     events: _SyncResource[Event]
     exhibitions: _SyncResource[Exhibition]
     places: _SyncResource[Place]
@@ -152,6 +171,7 @@ class NationalGallery:
         self._client = httpx.Client(transport=transport, timeout=timeout)
         for attr, model, base, default_actual in _RESOURCES:
             setattr(self, attr, _SyncResource(self, model, base, default_actual))
+        self.works = _SyncWorks(self, Work, EntityType.OBJECT)
 
     def search(self, body: dict[str, Any]) -> dict[str, Any]:
         response = self._client.post(URL, json=body)
@@ -210,10 +230,24 @@ class _AsyncResource[E: Entity]:
                 return
 
 
+class _AsyncWorks(_AsyncResource[Work]):
+    async def get_by_ng_number(self, ng_number: str) -> Work:
+        """Fetch the single work bearing the given NG (object) number, e.g. ``"NG3863"``.
+
+        Raises :class:`NotFoundError` if no work has that number.
+        """
+        value = _normalise_ng_number(ng_number)
+        payload = await self._client.search({"query": {"term": {"identifier.value": value}}, "size": 1})
+        items = self._model.from_response(payload)
+        if not items:
+            raise NotFoundError(f"No work with NG number {ng_number!r}")
+        return items[0]
+
+
 class AsyncNationalGallery:
     people: _AsyncResource[Person]
     organisations: _AsyncResource[Organisation]
-    works: _AsyncResource[Work]
+    works: _AsyncWorks
     events: _AsyncResource[Event]
     exhibitions: _AsyncResource[Exhibition]
     places: _AsyncResource[Place]
@@ -236,6 +270,7 @@ class AsyncNationalGallery:
         self._client = httpx.AsyncClient(transport=transport, timeout=timeout)
         for attr, model, base, default_actual in _RESOURCES:
             setattr(self, attr, _AsyncResource(self, model, base, default_actual))
+        self.works = _AsyncWorks(self, Work, EntityType.OBJECT)
 
     async def search(self, body: dict[str, Any]) -> dict[str, Any]:
         response = await self._client.post(URL, json=body)

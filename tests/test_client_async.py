@@ -7,7 +7,7 @@ import pytest
 from national_gallery_api import AsyncNationalGallery, Person, Work
 from national_gallery_api.exceptions import APIError, NotFoundError
 
-from .conftest import PERSON_SOURCE, WORK_SOURCE, MockAPI, es_payload, pid_of
+from .conftest import PERSON_SOURCE, WORK_SOURCE, MockAPI, es_payload, identifier_of, pid_of
 
 
 def reply(api: MockAPI, payload: dict) -> None:
@@ -43,6 +43,23 @@ async def test_async_get_raises_not_found(mock_api: MockAPI):
     async with AsyncNationalGallery() as ng:
         with pytest.raises(NotFoundError):
             await ng.people.get("missing")
+
+
+async def test_async_get_by_ng_number(mock_api: MockAPI):
+    reply(mock_api, es_payload([WORK_SOURCE]))
+    ng_number = identifier_of(WORK_SOURCE, "object number")
+    async with AsyncNationalGallery() as ng:
+        work = await ng.works.get_by_ng_number(ng_number)
+    assert isinstance(work, Work)
+    assert work.object_number == ng_number
+    assert mock_api.last_request["query"] == {"term": {"identifier.value": ng_number}}
+
+
+async def test_async_get_by_ng_number_raises_not_found(mock_api: MockAPI):
+    reply(mock_api, es_payload([]))
+    async with AsyncNationalGallery() as ng:
+        with pytest.raises(NotFoundError):
+            await ng.works.get_by_ng_number("NG0000")
 
 
 async def test_async_raw_search(mock_api: MockAPI):

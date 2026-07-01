@@ -4,7 +4,7 @@ import pytest
 from national_gallery_api import NationalGallery, Person, Work
 from national_gallery_api.exceptions import APIError, NotFoundError
 
-from .conftest import PERSON_SOURCE, WORK_SOURCE, MockAPI, es_payload, pid_of
+from .conftest import PERSON_SOURCE, WORK_SOURCE, MockAPI, es_payload, identifier_of, pid_of
 
 
 def reply(api: MockAPI, payload: dict) -> None:
@@ -109,6 +109,29 @@ def test_get_raises_not_found_when_empty(mock_api: MockAPI):
     reply(mock_api, es_payload([]))
     with NationalGallery() as ng, pytest.raises(NotFoundError):
         ng.people.get("does-not-exist")
+
+
+def test_get_by_ng_number_returns_work(mock_api: MockAPI):
+    reply(mock_api, es_payload([WORK_SOURCE]))
+    ng_number = identifier_of(WORK_SOURCE, "object number")
+    with NationalGallery() as ng:
+        work = ng.works.get_by_ng_number(ng_number)
+    assert isinstance(work, Work)
+    assert work.object_number == ng_number
+    assert mock_api.last_request["query"] == {"term": {"identifier.value": ng_number}}
+
+
+def test_get_by_ng_number_normalises_input(mock_api: MockAPI):
+    reply(mock_api, es_payload([WORK_SOURCE]))
+    with NationalGallery() as ng:
+        ng.works.get_by_ng_number("ng 3863")
+    assert mock_api.last_request["query"] == {"term": {"identifier.value": "NG3863"}}
+
+
+def test_get_by_ng_number_raises_not_found(mock_api: MockAPI):
+    reply(mock_api, es_payload([]))
+    with NationalGallery() as ng, pytest.raises(NotFoundError):
+        ng.works.get_by_ng_number("NG0000")
 
 
 def test_raw_search_returns_payload(mock_api: MockAPI):

@@ -1,4 +1,4 @@
-from pydantic import AliasPath, BaseModel, ConfigDict, Field
+from pydantic import AliasPath, BaseModel, ConfigDict, Field, field_validator
 
 from .base import Entity, Reference, ValueEntry, _identifier_value
 
@@ -24,6 +24,14 @@ class Creation(BaseModel):
 class Work(Entity):
     creation: list[Creation] = Field(default_factory=list)
     bibliography: list[BibliographyEntry] = Field(default_factory=list)
+
+    @field_validator("creation", "bibliography", mode="before")
+    @classmethod
+    def _as_list(cls, v: object) -> object:
+        """The backend stores these as either a single object or a list."""
+        if v is None:
+            return []
+        return [v] if isinstance(v, dict) else v
 
     @property
     def object_number(self) -> str | None:
