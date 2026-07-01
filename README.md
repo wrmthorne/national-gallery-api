@@ -1,9 +1,8 @@
-# national-gallery-api
+# National Gallery API Wrapper
 
-A small Python wrapper around the National Gallery (London) Elasticsearch
-search endpoint (`https://data.ng.ac.uk/es/public/_search`).
+A small Python wrapper around the National Gallery (London) Elasticsearch search endpoint (`https://data.ng.ac.uk/es/public/_search`).
 
-It provides two things:
+The library provides:
 
 1. Pydantic models that mirror the API's records allowing for a more pythonic interface with the National Gallery API
 2. Plain-text rendering of records e.g. for use in LLM prompts (entity disambiguation, authority linking, etc.)
@@ -41,19 +40,19 @@ with NationalGallery() as ng:
     print(vincent.external_ids)   # ULAN, Wikidata, RKD, VIAF, ...
 ```
 
-## Paging over all results
+## Iterate over all results
 
-`search` returns a single page. Use `iter_all` to lazily walk an entire result set:
+`iter_all` lazily walks an entire result set, handling paging internally:
 
 ```python
 with NationalGallery() as ng:
     for person in ng.people.iter_all(actual="Individual", page_size=100):
-        ...  # process one record at a time; pages are fetched as you go
+        ...
 ```
 
 ## Caching
 
-Caching is off by default. Enable it when running batch jobs that issue many repeated queries, so identical requests are served locally instead of hitting the API:
+Caching is disabled by default. To minimise server load when making frequent repeat requests (e.g. during batch jobs), cache should be enabled. the default TTL for cached records is `1 day`:
 
 ```python
 with NationalGallery(cache=True, ttl=3600, database_path="hishel_cache.db") as ng:
@@ -62,7 +61,7 @@ with NationalGallery(cache=True, ttl=3600, database_path="hishel_cache.db") as n
 
 ## Async
 
-`AsyncNationalGallery` mirrors the sync client. `search`, `get`, and raw queries are coroutines, and `iter_all` is an async generator:
+`AsyncNationalGallery` mirrors the sync client.
 
 ```python
 import asyncio
@@ -72,7 +71,7 @@ async def main():
     async with AsyncNationalGallery() as ng:
         results = await ng.works.search("portrait", size=5)
         for work in results:
-            print(work.title)
+            ...
 
         async for work in ng.works.iter_all("portrait", page_size=50):
             ...
@@ -116,7 +115,7 @@ with NationalGallery() as ng:
     print(payload["hits"]["total"])
 ```
 
-You can build query bodies with the helper used internally, if useful:
+You can build query bodies with the helper used internally:
 
 ```python
 from national_gallery_api import build_search, EntityType

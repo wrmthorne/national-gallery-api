@@ -1,12 +1,3 @@
-"""Rendering tests.
-
-These pin the *format* of the rendered output — labels, ``"; "`` separators,
-coordinate formatting, field order — while reading the *values* from the model
-itself, so they catch a formatting regression without breaking when the
-underlying record's content changes. Tests of empty/unknown/ordering behaviour
-use inline documents.
-"""
-
 from national_gallery_api import (
     Archive,
     Concept,
@@ -24,6 +15,7 @@ from national_gallery_api import (
     render_candidates,
     to_context,
 )
+from national_gallery_api.models import _BY_BASE
 
 from .conftest import (
     ARCHIVE_SOURCE,
@@ -105,6 +97,15 @@ def test_place_render_includes_coordinates():
     lat, lng = p.coordinate
     assert f"  Coordinates: {lat}, {lng}" in rendered
     assert f"  Within: {p.parent}" in rendered
+
+
+def test_every_concrete_type_has_a_dedicated_renderer():
+    # Guard against `model_for` gaining a type without a matching `to_context` registration,
+    # which would silently fall back to the generic `Entity` renderer.
+    fallback = to_context.dispatch(Entity)
+    concrete = set(_BY_BASE.values()) | {Person, Organisation}
+    missing = [t.__name__ for t in concrete if to_context.dispatch(t) is fallback]
+    assert not missing, f"types dispatching to the generic Entity renderer: {missing}"
 
 
 def test_base_entity_render_fallback():

@@ -1,18 +1,3 @@
-"""Recorded integration tests against the live National Gallery API.
-
-These exercise the real transport stack (retries, JSON parsing, model
-construction) end to end. On the first run, pytest-recording captures each
-HTTP exchange into `tests/cassettes/test_integration/<test name>.yaml`; every
-run after that replays from the cassette with no network access.
-
-Unlike the `mock_api` suite, these use a real `NationalGallery()` so requests
-reach httpx's leaf transport, where VCR intercepts them. Cache is left off (the
-default) so hishel does not short-circuit before VCR sees the request.
-
-To re-record after an API change, delete the relevant cassette and rerun, or
-pass `--record-mode=rewrite`.
-"""
-
 import pytest
 
 from national_gallery_api import AsyncNationalGallery, NationalGallery, Person, Work

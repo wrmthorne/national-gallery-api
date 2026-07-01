@@ -1,6 +1,3 @@
-"""Async client tests. The MockAPI fixture serves async requests through the
-same in-process handler, so these mirror the sync suite for the async paths."""
-
 import httpx
 import pytest
 

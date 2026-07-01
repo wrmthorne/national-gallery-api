@@ -1,13 +1,3 @@
-"""Model-parsing tests.
-
-Each happy-path test drives a model from a real captured document and asserts
-its accessors against values read straight back out of that document (via the
-`conftest` helpers), so the assertions hold for whatever the live API currently
-returns. Tests of *absent* fields and dispatch/identity logic use small inline
-documents — those are minimal inputs to exercise a branch, not stand-ins for an
-API response.
-"""
-
 from national_gallery_api import (
     Archive,
     Concept,

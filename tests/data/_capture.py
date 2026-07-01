@@ -1,10 +1,3 @@
-"""Capture one real `_source` document per entity type from the live API.
-
-Run with `uv run python -m tests.data._capture` (needs network). Overwrites the
-JSON files in this directory. These are genuine API documents used as test
-inputs, so they are regenerated, never hand-edited. Re-run after an API change.
-"""
-
 import json
 from pathlib import Path
 
