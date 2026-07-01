@@ -49,7 +49,9 @@ async def test_async_get_by_ng_number(mock_api: MockAPI):
         work = await ng.works.get_by_ng_number(ng_number)
     assert isinstance(work, Work)
     assert work.object_number == ng_number
-    assert mock_api.last_request["query"] == {"term": {"identifier.value": ng_number}}
+    must = mock_api.last_request["query"]["bool"]["must"]
+    assert {"term": {"identifier.value": ng_number}} in must
+    assert {"term": {"@datatype.base": "object"}} in must
 
 
 async def test_async_get_by_ng_number_raises_not_found(mock_api: MockAPI):

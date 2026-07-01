@@ -7,7 +7,11 @@ A small Python wrapper around the National Gallery (London) Elasticsearch search
 
 ## Setup
 
-```
+```bash
+# sync only
+pip install national-gallery-api
+
+# sync and async
 pip install "national-gallery-api[async]"
 ```
 

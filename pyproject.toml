@@ -4,10 +4,23 @@ version = "0.1.0"
 description = "Python client for the National Gallery (London) Elasticsearch API"
 keywords = ["national gallery", "ng", "api", "elasticsearch", "art", "museum", "london"]
 readme = "README.md"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
 authors = [
     { name = "William Thorne", email = "wthorne1@sheffield.ac.uk" }
 ]
 requires-python = ">=3.12"
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Typing :: Typed",
+]
 dependencies = [
     "hishel>=1.2.1",
     "httpx>=0.28.1",
@@ -17,6 +30,11 @@ dependencies = [
 
 [project.optional-dependencies]
 async = ["hishel[async]>=1.2.1"]
+
+[project.urls]
+Homepage = "https://github.com/wrmthorne/national-gallery-api"
+Repository = "https://github.com/wrmthorne/national-gallery-api"
+Issues = "https://github.com/wrmthorne/national-gallery-api/issues"
 
 [tool.ruff]
 exclude = [

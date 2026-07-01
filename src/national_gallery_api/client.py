@@ -94,8 +94,11 @@ def _resolve_actual(actual: str | None, default: str | None) -> str | None:
     return default if actual is _UNSET else actual
 
 
-def _term_body(field: str, value: str) -> dict[str, Any]:
-    return {"query": {"term": {field: value}}, "size": 1}
+def _term_body(field: str, value: str, base: EntityType | None = None) -> dict[str, Any]:
+    must: list[dict[str, Any]] = [{"term": {field: value}}]
+    if base is not None:
+        must.append({"term": {"@datatype.base": str(base)}})
+    return {"query": {"bool": {"must": must}}, "size": 1}
 
 
 def _one_or_raise[E: Entity](items: list[E], message: str) -> E:
@@ -129,7 +132,7 @@ class _SyncResource[E: Entity]:
         return SearchResults(self._model.from_response(payload), payload)
 
     def get(self, pid: str) -> E:
-        payload = self._client.search(_term_body("identifier.value", pid))
+        payload = self._client.search(_term_body("identifier.value", pid, self._base))
         return _one_or_raise(self._model.from_response(payload), f"No entity with PID {pid!r}")
 
     def iter_all(self, text: str | None = None, *, actual: str | None = _UNSET, page_size: int = 100) -> Iterator[E]:
@@ -151,7 +154,7 @@ class _SyncWorks(_SyncResource[Work]):
 
         Raises :class:`NotFoundError` if no work has that number.
         """
-        payload = self._client.search(_term_body("identifier.value", _normalise_ng_number(ng_number)))
+        payload = self._client.search(_term_body("identifier.value", _normalise_ng_number(ng_number), self._base))
         return _one_or_raise(self._model.from_response(payload), f"No work with NG number {ng_number!r}")
 
 
@@ -217,7 +220,7 @@ class _AsyncResource[E: Entity]:
         return SearchResults(self._model.from_response(payload), payload)
 
     async def get(self, pid: str) -> E:
-        payload = await self._client.search(_term_body("identifier.value", pid))
+        payload = await self._client.search(_term_body("identifier.value", pid, self._base))
         return _one_or_raise(self._model.from_response(payload), f"No entity with PID {pid!r}")
 
     async def iter_all(
@@ -241,7 +244,9 @@ class _AsyncWorks(_AsyncResource[Work]):
 
         Raises :class:`NotFoundError` if no work has that number.
         """
-        payload = await self._client.search(_term_body("identifier.value", _normalise_ng_number(ng_number)))
+        payload = await self._client.search(
+            _term_body("identifier.value", _normalise_ng_number(ng_number), self._base)
+        )
         return _one_or_raise(self._model.from_response(payload), f"No work with NG number {ng_number!r}")
 
 

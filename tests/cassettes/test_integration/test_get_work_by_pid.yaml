@@ -20,7 +20,7 @@ interactions:
     uri: https://data.ng.ac.uk/es/public/_search
   response:
     body:
-      string: "{\"took\":1,\"timed_out\":false,\"_shards\":{\"total\":2,\"successful\":2,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":1,\"relation\":\"eq\"},\"max_score\":17.33131,\"hits\":[{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0GE6-0001-0000-0000\",\"_score\":17.33131,\"_ignored\":[\"description.__long_text.keyword\",\"description.formatted.keyword\",\"description.__short_text.keyword\",\"creation.attribution.formatted.keyword\"],\"_source\":{\"date\":[{\"historical\":true,\"from\":\"2009-10-28\",\"type\":\"Pre-eminent
+      string: "{\"took\":43,\"timed_out\":false,\"_shards\":{\"total\":2,\"successful\":2,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":1,\"relation\":\"eq\"},\"max_score\":17.19857,\"hits\":[{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0GE6-0001-0000-0000\",\"_score\":17.19857,\"_ignored\":[\"description.__long_text.keyword\",\"description.formatted.keyword\",\"description.__short_text.keyword\",\"creation.attribution.formatted.keyword\"],\"_source\":{\"date\":[{\"historical\":true,\"from\":\"2009-10-28\",\"type\":\"Pre-eminent
         work flag\",\"value\":\"28/10/2009 - present\"}],\"access\":{\"item\":{\"privacy\":false,\"public_approved\":true},\"media\":{\"date\":[{\"from\":\"1924-01-01\",\"to\":\"9999\",\"value\":\"1924-01-01
         to present\"}],\"public_image\":true,\"download\":true,\"zoom\":true,\"hi_res\":true}},\"description\":[{\"formatted\":\"<p
         class=\\\"dokuwiki_paragraph\\\">This is one of five versions of <span class=\\\"dokuwiki_italic\\\">Sunflowers</span>
@@ -405,7 +405,7 @@ interactions:
         September 2024 \u2013 19 January 2025\"}],\"summary\":{\"title\":\"Van Gogh:
         Poets and Lovers\"},\"@link\":{\"venues\":[{\"date\":[{\"from\":\"2024-09-14\",\"to\":\"2025-01-19\",\"value\":\"2024-09-14
         to 2025-01-19\"}],\"venue\":[{\"summary\":{\"title\":\"The National Gallery
-        (London)\"},\"@link\":{\"location\":{\"summary\":{\"title\":\"Room 5\"},\"@admin\":{\"uid\":\"0U6W-0001-0000-0000\",\"id\":\"location-128\",\"uuid\":\"483f8227-990d-33fb-a3e7-a0768b360701\"},\"@datatype\":{\"base\":\"location\"},\"@entity\":\"reference\"}},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"category\":[{\"type\":\"room
+        (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"category\":[{\"type\":\"room
         theme\",\"value\":\"Room 5 - Decoration\"}],\"title\":[{\"type\":\"exhibition
         title at venue\",\"value\":\"Van Gogh: Poets and Lovers\"}]}]},\"@admin\":{\"uid\":\"0AHN-000B-0000-0000\",\"id\":\"exhibition-3826\",\"uuid\":\"e6b94b23-045f-3c33-ba26-a31e5e0fb309\"},\"@datatype\":{\"sub\":[\"NG
         Exhibition\"],\"base\":\"exhibition\"},\"@entity\":\"reference\"},{\"date\":[{\"from\":\"2022-11\",\"to\":\"9999\",\"value\":\"November
@@ -448,9 +448,10 @@ interactions:
         theme\",\"value\":\"Joy\"}],\"title\":[{\"type\":\"exhibition title at venue\",\"value\":\"Fruits
         of the Spirit: Art from the Heart\"}]}]},\"@admin\":{\"uid\":\"0A8T-000B-0000-0000\",\"id\":\"exhibition-4075\",\"uuid\":\"6ee96415-a35f-3954-846d-68c556296608\"},\"@datatype\":{\"sub\":[\"Online
         NG Exhibition\"],\"base\":\"exhibition\"},\"@entity\":\"reference\"},{\"date\":[{\"from\":\"2026-06-06\",\"to\":\"2026-10-11\",\"value\":\"6
-        June 2026 - 11 October 2026\"}],\"summary\":{\"title\":\"Van Gogh's Sunflowers
-        (working title)\"},\"@link\":{\"venues\":[{\"date\":[{\"from\":\"2026-06-06\",\"to\":\"2026-10-11\",\"value\":\"2026-06-06
-        to 2026-10-11\"}],\"venue\":[{\"summary\":{\"title\":\"Philadelphia Art Museum\"},\"@admin\":{\"uid\":\"0QUP-0001-0000-0000\",\"id\":\"agent-3042\",\"uuid\":\"ca8cd286-baf1-3b92-9f2e-8e4c3f481e4b\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"title\":[{\"type\":\"exhibition
+        June 2026 - 11 October 2026\"}],\"summary\":{\"title\":\"Van Gogh's Sunflowers:
+        A Symphony in Blue and Yellow\"},\"@link\":{\"venues\":[{\"date\":[{\"from\":\"2026-06-06\",\"to\":\"2026-10-11\",\"value\":\"2026-06-06
+        to 2026-10-11\"}],\"venue\":[{\"summary\":{\"title\":\"Philadelphia Museum
+        of Art\"},\"@admin\":{\"uid\":\"0QUP-0001-0000-0000\",\"id\":\"agent-3042\",\"uuid\":\"ca8cd286-baf1-3b92-9f2e-8e4c3f481e4b\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"title\":[{\"type\":\"exhibition
         title at venue\",\"value\":\"Van Gogh''s Sunflowers (working title)\"}]}]},\"@admin\":{\"uid\":\"0GPI-000B-0000-0000\",\"id\":\"exhibition-5712\",\"uuid\":\"c5813a48-a62c-323b-bbb2-225866d66fc5\"},\"@datatype\":{\"sub\":[\"3rd
         Party Exhibition (Loans Out)\"],\"base\":\"exhibition\"},\"@entity\":\"reference\"}],\"summary\":{\"title\":\"Sunflowers\"},\"identifier\":[{\"equivalents\":[{\"summary\":{\"title\":\"object
         number\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300312355\",\"type\":\"AAT\",\"value\":\"accession
@@ -502,10 +503,13 @@ interactions:
         Introduction to Sunflowers, Vincent van Gogh\"}],\"primary\":false},\"@admin\":{\"uid\":\"0I4I-000B-0000-0000\",\"access\":{\"level\":{\"label\":\"public\",\"value\":4}},\"id\":\"media-44128\",\"source\":\"tms\",\"uuid\":\"9f149af2-d85a-3832-a86e-cb5a30f16557\"},\"@processed\":{\"original\":{\"resizable\":true,\"absolute\":true,\"@type\":\"video\",\"format\":\"html\",\"modified\":0,\"location\":\"https://youtu.be/D0cDdaH5wsU\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":1164254}}}},\"@type\":\"video\",\"@datatype\":{\"actual\":\"video\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-video\",\"uuid\":\"70cfd1f0-5771-38ae-a1d3-683533fef7e3\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"media\"},\"title\":[{\"type\":\"caption\",\"value\":\"BSL
         Introduction to Sunflowers, Vincent van Gogh\"}],\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"Stories
         in Colour - Series 1: Episode 1 - Do you see the same colour I see?\"}],\"primary\":false},\"@admin\":{\"uid\":\"0OJN-000B-0000-0000\",\"access\":{\"level\":{\"label\":\"public\",\"value\":4}},\"id\":\"media-44758\",\"source\":\"tms\",\"uuid\":\"99b9d957-a624-3d9c-9a7e-a3461ed00c52\"},\"@processed\":{\"original\":{\"resizable\":true,\"absolute\":true,\"@type\":\"video\",\"format\":\"html\",\"modified\":0,\"location\":\"https://youtu.be/gYTWp_iLRh4\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":1577533}}}},\"@type\":\"video\",\"@datatype\":{\"actual\":\"video\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-video\",\"uuid\":\"70cfd1f0-5771-38ae-a1d3-683533fef7e3\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"media\"},\"title\":[{\"type\":\"caption\",\"value\":\"Stories
-        in Colour - Series 1: Episode 1 - Do you see the same colour I see?\"}],\"@entity\":\"reference\"}],\"@admin\":{\"processed\":1780707401984,\"sequence\":1661763,\"uid\":\"0GE6-0001-0000-0000\",\"added\":1697553960041,\"stream\":\"tms\",\"id\":\"object-6183\",\"source\":\"Tms\",\"uuid\":\"c883d766-601f-389b-9112-6a6d79018022\"},\"material\":[{\"value\":\"oil
+        in Colour - Series 1: Episode 1 - Do you see the same colour I see?\"}],\"@entity\":\"reference\"}],\"@admin\":{\"processed\":1781895428504,\"sequence\":1666494,\"uid\":\"0GE6-0001-0000-0000\",\"added\":1697553960041,\"stream\":\"tms\",\"id\":\"object-6183\",\"source\":\"Tms\",\"uuid\":\"c883d766-601f-389b-9112-6a6d79018022\"},\"material\":[{\"value\":\"oil
         on canvas\"},{\"type\":\"detailed\",\"value\":\"oil on canvas\"},{\"summary\":{\"title\":\"oil\"},\"@link\":{\"role\":[{\"value\":\"medium\"}]},\"@admin\":{\"uid\":\"0FLK-0008-0000-0000\",\"id\":\"concept-39977\",\"uuid\":\"8b85d85a-c7b3-355e-a2a3-9f8696065bf1\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"canvas\"},\"@link\":{\"role\":[{\"value\":\"primary
         support\"}]},\"@admin\":{\"uid\":\"0FP6-0008-0000-0000\",\"id\":\"concept-39978\",\"uuid\":\"ed749495-ea74-3bb8-8100-01a32bbd7205\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"location\":{\"current\":{\"summary\":{\"title\":\"Not
-        on display\"},\"@admin\":{\"available\":false}}},\"style\":[{\"summary\":{\"title\":\"post-Impressionist\"},\"@link\":{\"role\":[{\"value\":\"period/style/movement\"}]},\"@admin\":{\"uid\":\"0FAP-0008-0000-0000\",\"id\":\"concept-40194\",\"uuid\":\"5e45f6c0-099b-36d6-94d1-5d002d5ae9d4\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"category\":[{\"equivalents\":[{\"summary\":{\"title\":\"Main
+        on display\"},\"@link\":{\"date\":[{\"from\":\"2026-06-16T00:00\"}],\"custodian\":{\"summary\":{\"title\":\"Philadelphia
+        Museum of Art\"},\"@admin\":{\"uid\":\"0QUP-0001-0000-0000\",\"id\":\"agent-3042\",\"uuid\":\"ca8cd286-baf1-3b92-9f2e-8e4c3f481e4b\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"supplement\":\"On
+        loan: Van Gogh's Sunflowers (working title), <a href=\\\"http://www.philamuseum.org\\\">Philadelphia
+        Museum of Art</a>, Philadelphia, USA\"},\"@admin\":{\"uid\":\"0UGU-0001-0000-0000\",\"available\":true,\"id\":\"location-3\",\"uuid\":\"3fcc57ce-d540-388f-8fee-d644e0fc41eb\"},\"@datatype\":{\"base\":\"location\"},\"floor\":0,\"@entity\":\"reference\"}},\"style\":[{\"summary\":{\"title\":\"post-Impressionist\"},\"@link\":{\"role\":[{\"value\":\"period/style/movement\"}]},\"@admin\":{\"uid\":\"0FAP-0008-0000-0000\",\"id\":\"concept-40194\",\"uuid\":\"5e45f6c0-099b-36d6-94d1-5d002d5ae9d4\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"category\":[{\"equivalents\":[{\"summary\":{\"title\":\"Main
         Collection\"},\"@admin\":{\"uid\":\"0ORM-000B-0000-0000\",\"id\":\"concept-main_collection\",\"uuid\":\"d85ab112-31c0-30df-965c-84034814811c\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"department\",\"value\":\"Main
         Collection\"}]}}]}}"
     headers:
@@ -518,22 +522,22 @@ interactions:
       Connection:
       - close
       Date:
-      - Sun, 07 Jun 2026 18:28:31 GMT
+      - Wed, 01 Jul 2026 17:00:55 GMT
       Server:
-      - Apache/2.4.67 (Win64) OpenSSL/3.6.2
+      - Apache/2.4.68 (Win64) OpenSSL/3.6.3
       Vary:
       - Origin
       X-elastic-product:
       - Elasticsearch
       content-length:
-      - '74136'
+      - '74687'
       content-type:
       - application/json; charset=UTF-8
     status:
       code: 200
       message: OK
 - request:
-    body: '{"query":{"term":{"identifier.value":"0GE6-0001-0000-0000"}},"size":1}'
+    body: '{"query":{"bool":{"must":[{"term":{"identifier.value":"0GE6-0001-0000-0000"}},{"term":{"@datatype.base":"object"}}]}},"size":1}'
     headers:
       Accept:
       - '*/*'
@@ -542,7 +546,7 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '70'
+      - '127'
       Content-Type:
       - application/json
       Host:
@@ -553,7 +557,7 @@ interactions:
     uri: https://data.ng.ac.uk/es/public/_search
   response:
     body:
-      string: "{\"took\":0,\"timed_out\":false,\"_shards\":{\"total\":2,\"successful\":2,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":1,\"relation\":\"eq\"},\"max_score\":13.676355,\"hits\":[{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0GE6-0001-0000-0000\",\"_score\":13.676355,\"_ignored\":[\"description.__long_text.keyword\",\"description.formatted.keyword\",\"description.__short_text.keyword\",\"creation.attribution.formatted.keyword\"],\"_source\":{\"date\":[{\"historical\":true,\"from\":\"2009-10-28\",\"type\":\"Pre-eminent
+      string: "{\"took\":1,\"timed_out\":false,\"_shards\":{\"total\":2,\"successful\":2,\"skipped\":0,\"failed\":0},\"hits\":{\"total\":{\"value\":1,\"relation\":\"eq\"},\"max_score\":16.712608,\"hits\":[{\"_index\":\"public\",\"_type\":\"data\",\"_id\":\"0GE6-0001-0000-0000\",\"_score\":16.712608,\"_ignored\":[\"description.__long_text.keyword\",\"description.formatted.keyword\",\"description.__short_text.keyword\",\"creation.attribution.formatted.keyword\"],\"_source\":{\"date\":[{\"historical\":true,\"from\":\"2009-10-28\",\"type\":\"Pre-eminent
         work flag\",\"value\":\"28/10/2009 - present\"}],\"access\":{\"item\":{\"privacy\":false,\"public_approved\":true},\"media\":{\"date\":[{\"from\":\"1924-01-01\",\"to\":\"9999\",\"value\":\"1924-01-01
         to present\"}],\"public_image\":true,\"download\":true,\"zoom\":true,\"hi_res\":true}},\"description\":[{\"formatted\":\"<p
         class=\\\"dokuwiki_paragraph\\\">This is one of five versions of <span class=\\\"dokuwiki_italic\\\">Sunflowers</span>
@@ -938,7 +942,7 @@ interactions:
         September 2024 \u2013 19 January 2025\"}],\"summary\":{\"title\":\"Van Gogh:
         Poets and Lovers\"},\"@link\":{\"venues\":[{\"date\":[{\"from\":\"2024-09-14\",\"to\":\"2025-01-19\",\"value\":\"2024-09-14
         to 2025-01-19\"}],\"venue\":[{\"summary\":{\"title\":\"The National Gallery
-        (London)\"},\"@link\":{\"location\":{\"summary\":{\"title\":\"Room 5\"},\"@admin\":{\"uid\":\"0U6W-0001-0000-0000\",\"id\":\"location-128\",\"uuid\":\"483f8227-990d-33fb-a3e7-a0768b360701\"},\"@datatype\":{\"base\":\"location\"},\"@entity\":\"reference\"}},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"category\":[{\"type\":\"room
+        (London)\"},\"@admin\":{\"uid\":\"0P5X-0001-0000-0000\",\"id\":\"agent-652\",\"uuid\":\"511c84f0-a664-39ab-b653-6db7fc6c345e\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"category\":[{\"type\":\"room
         theme\",\"value\":\"Room 5 - Decoration\"}],\"title\":[{\"type\":\"exhibition
         title at venue\",\"value\":\"Van Gogh: Poets and Lovers\"}]}]},\"@admin\":{\"uid\":\"0AHN-000B-0000-0000\",\"id\":\"exhibition-3826\",\"uuid\":\"e6b94b23-045f-3c33-ba26-a31e5e0fb309\"},\"@datatype\":{\"sub\":[\"NG
         Exhibition\"],\"base\":\"exhibition\"},\"@entity\":\"reference\"},{\"date\":[{\"from\":\"2022-11\",\"to\":\"9999\",\"value\":\"November
@@ -981,9 +985,10 @@ interactions:
         theme\",\"value\":\"Joy\"}],\"title\":[{\"type\":\"exhibition title at venue\",\"value\":\"Fruits
         of the Spirit: Art from the Heart\"}]}]},\"@admin\":{\"uid\":\"0A8T-000B-0000-0000\",\"id\":\"exhibition-4075\",\"uuid\":\"6ee96415-a35f-3954-846d-68c556296608\"},\"@datatype\":{\"sub\":[\"Online
         NG Exhibition\"],\"base\":\"exhibition\"},\"@entity\":\"reference\"},{\"date\":[{\"from\":\"2026-06-06\",\"to\":\"2026-10-11\",\"value\":\"6
-        June 2026 - 11 October 2026\"}],\"summary\":{\"title\":\"Van Gogh's Sunflowers
-        (working title)\"},\"@link\":{\"venues\":[{\"date\":[{\"from\":\"2026-06-06\",\"to\":\"2026-10-11\",\"value\":\"2026-06-06
-        to 2026-10-11\"}],\"venue\":[{\"summary\":{\"title\":\"Philadelphia Art Museum\"},\"@admin\":{\"uid\":\"0QUP-0001-0000-0000\",\"id\":\"agent-3042\",\"uuid\":\"ca8cd286-baf1-3b92-9f2e-8e4c3f481e4b\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"title\":[{\"type\":\"exhibition
+        June 2026 - 11 October 2026\"}],\"summary\":{\"title\":\"Van Gogh's Sunflowers:
+        A Symphony in Blue and Yellow\"},\"@link\":{\"venues\":[{\"date\":[{\"from\":\"2026-06-06\",\"to\":\"2026-10-11\",\"value\":\"2026-06-06
+        to 2026-10-11\"}],\"venue\":[{\"summary\":{\"title\":\"Philadelphia Museum
+        of Art\"},\"@admin\":{\"uid\":\"0QUP-0001-0000-0000\",\"id\":\"agent-3042\",\"uuid\":\"ca8cd286-baf1-3b92-9f2e-8e4c3f481e4b\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"}],\"title\":[{\"type\":\"exhibition
         title at venue\",\"value\":\"Van Gogh''s Sunflowers (working title)\"}]}]},\"@admin\":{\"uid\":\"0GPI-000B-0000-0000\",\"id\":\"exhibition-5712\",\"uuid\":\"c5813a48-a62c-323b-bbb2-225866d66fc5\"},\"@datatype\":{\"sub\":[\"3rd
         Party Exhibition (Loans Out)\"],\"base\":\"exhibition\"},\"@entity\":\"reference\"}],\"summary\":{\"title\":\"Sunflowers\"},\"identifier\":[{\"equivalents\":[{\"summary\":{\"title\":\"object
         number\"},\"identifier\":[{\"id\":\"https://vocab.getty.edu/aat/300312355\",\"type\":\"AAT\",\"value\":\"accession
@@ -1035,10 +1040,13 @@ interactions:
         Introduction to Sunflowers, Vincent van Gogh\"}],\"primary\":false},\"@admin\":{\"uid\":\"0I4I-000B-0000-0000\",\"access\":{\"level\":{\"label\":\"public\",\"value\":4}},\"id\":\"media-44128\",\"source\":\"tms\",\"uuid\":\"9f149af2-d85a-3832-a86e-cb5a30f16557\"},\"@processed\":{\"original\":{\"resizable\":true,\"absolute\":true,\"@type\":\"video\",\"format\":\"html\",\"modified\":0,\"location\":\"https://youtu.be/D0cDdaH5wsU\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":1164254}}}},\"@type\":\"video\",\"@datatype\":{\"actual\":\"video\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-video\",\"uuid\":\"70cfd1f0-5771-38ae-a1d3-683533fef7e3\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"media\"},\"title\":[{\"type\":\"caption\",\"value\":\"BSL
         Introduction to Sunflowers, Vincent van Gogh\"}],\"@entity\":\"reference\"},{\"@link\":{\"role\":[{\"value\":\"Stories
         in Colour - Series 1: Episode 1 - Do you see the same colour I see?\"}],\"primary\":false},\"@admin\":{\"uid\":\"0OJN-000B-0000-0000\",\"access\":{\"level\":{\"label\":\"public\",\"value\":4}},\"id\":\"media-44758\",\"source\":\"tms\",\"uuid\":\"99b9d957-a624-3d9c-9a7e-a3461ed00c52\"},\"@processed\":{\"original\":{\"resizable\":true,\"absolute\":true,\"@type\":\"video\",\"format\":\"html\",\"modified\":0,\"location\":\"https://youtu.be/gYTWp_iLRh4\",\"measurements\":{\"filesize\":{\"units\":\"bytes\",\"value\":1577533}}}},\"@type\":\"video\",\"@datatype\":{\"actual\":\"video\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-video\",\"uuid\":\"70cfd1f0-5771-38ae-a1d3-683533fef7e3\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"media\"},\"title\":[{\"type\":\"caption\",\"value\":\"Stories
-        in Colour - Series 1: Episode 1 - Do you see the same colour I see?\"}],\"@entity\":\"reference\"}],\"@admin\":{\"processed\":1780707401984,\"sequence\":1661763,\"uid\":\"0GE6-0001-0000-0000\",\"added\":1697553960041,\"stream\":\"tms\",\"id\":\"object-6183\",\"source\":\"Tms\",\"uuid\":\"c883d766-601f-389b-9112-6a6d79018022\"},\"material\":[{\"value\":\"oil
+        in Colour - Series 1: Episode 1 - Do you see the same colour I see?\"}],\"@entity\":\"reference\"}],\"@admin\":{\"processed\":1781895428504,\"sequence\":1666494,\"uid\":\"0GE6-0001-0000-0000\",\"added\":1697553960041,\"stream\":\"tms\",\"id\":\"object-6183\",\"source\":\"Tms\",\"uuid\":\"c883d766-601f-389b-9112-6a6d79018022\"},\"material\":[{\"value\":\"oil
         on canvas\"},{\"type\":\"detailed\",\"value\":\"oil on canvas\"},{\"summary\":{\"title\":\"oil\"},\"@link\":{\"role\":[{\"value\":\"medium\"}]},\"@admin\":{\"uid\":\"0FLK-0008-0000-0000\",\"id\":\"concept-39977\",\"uuid\":\"8b85d85a-c7b3-355e-a2a3-9f8696065bf1\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"},{\"summary\":{\"title\":\"canvas\"},\"@link\":{\"role\":[{\"value\":\"primary
         support\"}]},\"@admin\":{\"uid\":\"0FP6-0008-0000-0000\",\"id\":\"concept-39978\",\"uuid\":\"ed749495-ea74-3bb8-8100-01a32bbd7205\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"location\":{\"current\":{\"summary\":{\"title\":\"Not
-        on display\"},\"@admin\":{\"available\":false}}},\"style\":[{\"summary\":{\"title\":\"post-Impressionist\"},\"@link\":{\"role\":[{\"value\":\"period/style/movement\"}]},\"@admin\":{\"uid\":\"0FAP-0008-0000-0000\",\"id\":\"concept-40194\",\"uuid\":\"5e45f6c0-099b-36d6-94d1-5d002d5ae9d4\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"category\":[{\"equivalents\":[{\"summary\":{\"title\":\"Main
+        on display\"},\"@link\":{\"date\":[{\"from\":\"2026-06-16T00:00\"}],\"custodian\":{\"summary\":{\"title\":\"Philadelphia
+        Museum of Art\"},\"@admin\":{\"uid\":\"0QUP-0001-0000-0000\",\"id\":\"agent-3042\",\"uuid\":\"ca8cd286-baf1-3b92-9f2e-8e4c3f481e4b\"},\"@datatype\":{\"actual\":\"Organisation\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-organisation\",\"uuid\":\"2bd185c5-a9b6-36ee-8bea-3dc3251b28e7\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"agent\"},\"@entity\":\"reference\"},\"supplement\":\"On
+        loan: Van Gogh's Sunflowers (working title), <a href=\\\"http://www.philamuseum.org\\\">Philadelphia
+        Museum of Art</a>, Philadelphia, USA\"},\"@admin\":{\"uid\":\"0UGU-0001-0000-0000\",\"available\":true,\"id\":\"location-3\",\"uuid\":\"3fcc57ce-d540-388f-8fee-d644e0fc41eb\"},\"@datatype\":{\"base\":\"location\"},\"floor\":0,\"@entity\":\"reference\"}},\"style\":[{\"summary\":{\"title\":\"post-Impressionist\"},\"@link\":{\"role\":[{\"value\":\"period/style/movement\"}]},\"@admin\":{\"uid\":\"0FAP-0008-0000-0000\",\"id\":\"concept-40194\",\"uuid\":\"5e45f6c0-099b-36d6-94d1-5d002d5ae9d4\"},\"@datatype\":{\"actual\":\"thesaurus\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-thesaurus\",\"uuid\":\"f43fd0f4-55b4-3b40-848f-447f65fd6444\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"category\":[{\"equivalents\":[{\"summary\":{\"title\":\"Main
         Collection\"},\"@admin\":{\"uid\":\"0ORM-000B-0000-0000\",\"id\":\"concept-main_collection\",\"uuid\":\"d85ab112-31c0-30df-965c-84034814811c\"},\"@datatype\":{\"actual\":\"equivalents\",\"equivalents\":[{\"@admin\":{\"id\":\"concept-equivalents\",\"uuid\":\"ff84d33a-1072-38d2-953b-5332535ba652\",\"status\":\"unavailable\"},\"@entity\":\"reference\"}],\"base\":\"concept\"},\"@entity\":\"reference\"}],\"type\":\"department\",\"value\":\"Main
         Collection\"}]}}]}}"
     headers:
@@ -1051,15 +1059,15 @@ interactions:
       Connection:
       - close
       Date:
-      - Sun, 07 Jun 2026 18:28:31 GMT
+      - Wed, 01 Jul 2026 17:00:55 GMT
       Server:
-      - Apache/2.4.67 (Win64) OpenSSL/3.6.2
+      - Apache/2.4.68 (Win64) OpenSSL/3.6.3
       Vary:
       - Origin
       X-elastic-product:
       - Elasticsearch
       content-length:
-      - '74138'
+      - '74688'
       content-type:
       - application/json; charset=UTF-8
     status:

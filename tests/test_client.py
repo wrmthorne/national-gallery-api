@@ -102,7 +102,9 @@ def test_get_returns_single_record(mock_api: MockAPI):
     with NationalGallery() as ng:
         person = ng.people.get(pid)
     assert person.title == PERSON_SOURCE["summary"]["title"]
-    assert mock_api.last_request["query"] == {"term": {"identifier.value": pid}}
+    must = mock_api.last_request["query"]["bool"]["must"]
+    assert {"term": {"identifier.value": pid}} in must
+    assert {"term": {"@datatype.base": "agent"}} in must
 
 
 def test_get_raises_not_found_when_empty(mock_api: MockAPI):
@@ -118,14 +120,17 @@ def test_get_by_ng_number_returns_work(mock_api: MockAPI):
         work = ng.works.get_by_ng_number(ng_number)
     assert isinstance(work, Work)
     assert work.object_number == ng_number
-    assert mock_api.last_request["query"] == {"term": {"identifier.value": ng_number}}
+    must = mock_api.last_request["query"]["bool"]["must"]
+    assert {"term": {"identifier.value": ng_number}} in must
+    assert {"term": {"@datatype.base": "object"}} in must
 
 
 def test_get_by_ng_number_normalises_input(mock_api: MockAPI):
     reply(mock_api, es_payload([WORK_SOURCE]))
     with NationalGallery() as ng:
         ng.works.get_by_ng_number("ng 3863")
-    assert mock_api.last_request["query"] == {"term": {"identifier.value": "NG3863"}}
+    must = mock_api.last_request["query"]["bool"]["must"]
+    assert {"term": {"identifier.value": "NG3863"}} in must
 
 
 def test_get_by_ng_number_raises_not_found(mock_api: MockAPI):
