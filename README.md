@@ -1,13 +1,9 @@
 # National Gallery API Wrapper
 
-A small Python wrapper around the National Gallery (London) Elasticsearch search endpoint (`https://data.ng.ac.uk/es/public/_search`).
+A small Python wrapper around the National Gallery (London) Elasticsearch search endpoint (`https://data.ng.ac.uk/es/public/_search`). The library aims to provide:
 
-The library provides:
-
-1. Pydantic models that mirror the API's records allowing for a more pythonic interface with the National Gallery API
+1. A more pythonic interface with the National Gallery API
 2. Plain-text rendering of records e.g. for use in LLM prompts (entity disambiguation, authority linking, etc.)
-
-The backend is schemaless, so the models are deliberately loose: they surface the common fields as typed attributes and keep the full original record on `.raw`.
 
 ## Setup
 
@@ -52,7 +48,7 @@ with NationalGallery() as ng:
 
 ## Caching
 
-Caching is disabled by default. To minimise server load when making frequent repeat requests (e.g. during batch jobs), cache should be enabled. the default TTL for cached records is `1 day`:
+Caching is disabled by default. To minimise server load when making frequent repeat requests (e.g. during batch jobs), cache should be enabled:
 
 ```python
 with NationalGallery(cache=True, ttl=3600, database_path="hishel_cache.db") as ng:
@@ -81,17 +77,15 @@ asyncio.run(main())
 
 ## Rendering for LLM context
 
-`to_context` renders a single record, and `render_candidates` renders a set of records for disambiguation. Both are deterministic: field order and labels are fixed, multivalued fields are de-duplicated, and `render_candidates` orders candidates by PID regardless of input order, so the same input always produces the same string (useful for reproducible, cacheable prompts).
-
 ```python
 from national_gallery_api import NationalGallery, to_context, render_candidates
 
 with NationalGallery() as ng:
     vincent = ng.people.get("0QCE-0001-0000-0000")
-    print(to_context(vincent))
+    print(to_context(vincent)) # for single entities
 
     candidates = ng.people.search("rembrandt", actual="Individual", size=5)
-    print(render_candidates(candidates))
+    print(render_candidates(candidates)) # for record sets
 ```
 
 Example `to_context` output:
@@ -107,7 +101,7 @@ Person: Vincent van Gogh
 
 ## Raw Elasticsearch queries
 
-If a query or field is not covered by the typed API, send a raw Elasticsearch query body and get back the unparsed response dict:
+If a query or field is not covered by the typed API, raw Elasticsearch queries can be made, returning an unparsed response dict:
 
 ```python
 with NationalGallery() as ng:
@@ -115,7 +109,7 @@ with NationalGallery() as ng:
     print(payload["hits"]["total"])
 ```
 
-You can build query bodies with the helper used internally:
+Query bodies can also be built with the `build_search` helper:
 
 ```python
 from national_gallery_api import build_search, EntityType
