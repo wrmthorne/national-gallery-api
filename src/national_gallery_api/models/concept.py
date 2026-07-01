@@ -50,5 +50,5 @@ class Place(Entity):
             lat = c.latitude.value if c.latitude else None
             lng = c.longitude.value if c.longitude else None
             if isinstance(lat, (int, float)) and isinstance(lng, (int, float)):
-                return (float(lat), float(lng))
+                return float(lat), float(lng)
         return None

@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import AsyncIterator, Iterator
-from typing import Any, TypeVar
+from typing import Any
 
 import httpx
 from pydantic import BaseModel
@@ -27,8 +27,6 @@ from .transport import build_async_transport, build_sync_transport
 
 URL = "https://data.ng.ac.uk/es/public/_search"
 _SORT = [{"@admin.uid": "asc"}]
-
-E = TypeVar("E", bound=Entity)
 
 # (attribute, model, base, default_actual)
 _RESOURCES = [
@@ -92,6 +90,27 @@ def _normalise_ng_number(ng_number: str) -> str:
     return ng_number.replace(" ", "").upper()
 
 
+def _resolve_actual(actual: str | None, default: str | None) -> str | None:
+    return default if actual is _UNSET else actual
+
+
+def _term_body(field: str, value: str) -> dict[str, Any]:
+    return {"query": {"term": {field: value}}, "size": 1}
+
+
+def _one_or_raise[E: Entity](items: list[E], message: str) -> E:
+    if not items:
+        raise NotFoundError(message)
+    return items[0]
+
+
+def _next_after(hits: list[dict[str, Any]], page_size: int) -> list[Any] | None:
+    """The ``search_after`` cursor for the next page, or ``None`` when paging should stop."""
+    if not hits or len(hits) < page_size:
+        return None
+    return hits[-1].get("sort")
+
+
 class _SyncResource[E: Entity]:
     def __init__(
         self, client: NationalGallery, model: type[E], base: EntityType, default_actual: str | None = None
@@ -104,29 +123,24 @@ class _SyncResource[E: Entity]:
     def search(
         self, text: str | None = None, *, actual: str | None = _UNSET, size: int = 10, from_: int = 0
     ) -> SearchResults[E]:
-        actual = self._default_actual if actual is _UNSET else actual
+        actual = _resolve_actual(actual, self._default_actual)
         body = build_search(text, base=self._base, actual=actual, size=size, from_=from_)
         payload = self._client.search(body)
         return SearchResults(self._model.from_response(payload), payload)
 
     def get(self, pid: str) -> E:
-        payload = self._client.search({"query": {"term": {"identifier.value": pid}}, "size": 1})
-        items = self._model.from_response(payload)
-        if not items:
-            raise NotFoundError(f"No entity with PID {pid!r}")
-        return items[0]
+        payload = self._client.search(_term_body("identifier.value", pid))
+        return _one_or_raise(self._model.from_response(payload), f"No entity with PID {pid!r}")
 
     def iter_all(self, text: str | None = None, *, actual: str | None = _UNSET, page_size: int = 100) -> Iterator[E]:
-        actual = self._default_actual if actual is _UNSET else actual
+        actual = _resolve_actual(actual, self._default_actual)
         after: list[Any] | None = None
         while True:
             payload = self._client.search(_page_body(text, self._base, actual, page_size, after))
             hits = payload.get("hits", {}).get("hits", [])
             for hit in hits:
                 yield self._model.from_hit(hit)
-            if len(hits) < page_size or not hits:
-                return
-            after = hits[-1].get("sort")
+            after = _next_after(hits, page_size)
             if after is None:
                 return
 
@@ -137,12 +151,8 @@ class _SyncWorks(_SyncResource[Work]):
 
         Raises :class:`NotFoundError` if no work has that number.
         """
-        value = _normalise_ng_number(ng_number)
-        payload = self._client.search({"query": {"term": {"identifier.value": value}}, "size": 1})
-        items = self._model.from_response(payload)
-        if not items:
-            raise NotFoundError(f"No work with NG number {ng_number!r}")
-        return items[0]
+        payload = self._client.search(_term_body("identifier.value", _normalise_ng_number(ng_number)))
+        return _one_or_raise(self._model.from_response(payload), f"No work with NG number {ng_number!r}")
 
 
 class NationalGallery:
@@ -201,31 +211,26 @@ class _AsyncResource[E: Entity]:
     async def search(
         self, text: str | None = None, *, actual: str | None = _UNSET, size: int = 10, from_: int = 0
     ) -> SearchResults[E]:
-        actual = self._default_actual if actual is _UNSET else actual
+        actual = _resolve_actual(actual, self._default_actual)
         body = build_search(text, base=self._base, actual=actual, size=size, from_=from_)
         payload = await self._client.search(body)
         return SearchResults(self._model.from_response(payload), payload)
 
     async def get(self, pid: str) -> E:
-        payload = await self._client.search({"query": {"term": {"identifier.value": pid}}, "size": 1})
-        items = self._model.from_response(payload)
-        if not items:
-            raise NotFoundError(f"No entity with PID {pid!r}")
-        return items[0]
+        payload = await self._client.search(_term_body("identifier.value", pid))
+        return _one_or_raise(self._model.from_response(payload), f"No entity with PID {pid!r}")
 
     async def iter_all(
         self, text: str | None = None, *, actual: str | None = _UNSET, page_size: int = 100
     ) -> AsyncIterator[E]:
-        actual = self._default_actual if actual is _UNSET else actual
+        actual = _resolve_actual(actual, self._default_actual)
         after: list[Any] | None = None
         while True:
             payload = await self._client.search(_page_body(text, self._base, actual, page_size, after))
             hits = payload.get("hits", {}).get("hits", [])
             for hit in hits:
                 yield self._model.from_hit(hit)
-            if len(hits) < page_size or not hits:
-                return
-            after = hits[-1].get("sort")
+            after = _next_after(hits, page_size)
             if after is None:
                 return
 
@@ -236,12 +241,8 @@ class _AsyncWorks(_AsyncResource[Work]):
 
         Raises :class:`NotFoundError` if no work has that number.
         """
-        value = _normalise_ng_number(ng_number)
-        payload = await self._client.search({"query": {"term": {"identifier.value": value}}, "size": 1})
-        items = self._model.from_response(payload)
-        if not items:
-            raise NotFoundError(f"No work with NG number {ng_number!r}")
-        return items[0]
+        payload = await self._client.search(_term_body("identifier.value", _normalise_ng_number(ng_number)))
+        return _one_or_raise(self._model.from_response(payload), f"No work with NG number {ng_number!r}")
 
 
 class AsyncNationalGallery:

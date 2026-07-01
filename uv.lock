@@ -25,6 +25,18 @@ wheels = [
 ]
 
 [[package]]
+name = "anysqlite"
+version = "0.0.5"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "anyio" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0f/4b/cd5d66b9f87e773bc71344a368b9472987e33514e6627e28342b9c3e7c43/anysqlite-0.0.5.tar.gz", hash = "sha256:9dfcf87baf6b93426ad1d9118088c41dbf24ef01b445eea4a5d486bac2755cce", size = 3432, upload-time = "2023-10-02T13:49:25.135Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0b/31/349eae2bc9d9331dd8951684cf94528d91efaa71129dc30822ac111dfc66/anysqlite-0.0.5-py3-none-any.whl", hash = "sha256:cb345dc4f76f6b37f768d7a0b3e9cf5c700dfcb7a6356af8ab46a11f666edbe7", size = 3907, upload-time = "2023-10-02T13:49:26.943Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.5.20"
 source = { registry = "https://pypi.org/simple" }
@@ -62,6 +74,12 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/2d/7a/ef9231da56bc04000f7343831deb1946f5fc270213080fa212f61ddbfe0a/hishel-1.2.1.tar.gz", hash = "sha256:87212cd31a7a6904352ec5bd7119ed3b43d0ab1259d5995751a2a2b173d7c305", size = 814761, upload-time = "2026-04-27T16:16:42.35Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/c3/de/5f1bebcf644f2f350c39d2630f391399d0c39ff39fbfff98113889898827/hishel-1.2.1-py3-none-any.whl", hash = "sha256:5e1c1e38f4c970eeef69bc8528e85fd5c02eab15a22f9845d30fc880da32b881", size = 73223, upload-time = "2026-04-27T16:16:40.585Z" },
+]
+
+[package.optional-dependencies]
+async = [
+    { name = "anyio" },
+    { name = "anysqlite" },
 ]
 
 [[package]]
@@ -177,8 +195,14 @@ dependencies = [
     { name = "pydantic" },
 ]
 
+[package.optional-dependencies]
+async = [
+    { name = "hishel", extra = ["async"] },
+]
+
 [package.dev-dependencies]
 dev = [
+    { name = "hishel", extra = ["async"] },
     { name = "pyrefly" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
@@ -189,13 +213,16 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "hishel", specifier = ">=1.2.1" },
+    { name = "hishel", extras = ["async"], marker = "extra == 'async'", specifier = ">=1.2.1" },
     { name = "httpx", specifier = ">=0.28.1" },
     { name = "httpx-retries", specifier = ">=0.5.0" },
     { name = "pydantic", specifier = ">=2.13.4" },
 ]
+provides-extras = ["async"]
 
 [package.metadata.requires-dev]
 dev = [
+    { name = "hishel", extras = ["async"], specifier = ">=1.2.1" },
     { name = "pyrefly", specifier = ">=1.0.0" },
     { name = "pytest", specifier = ">=9.0.3" },
     { name = "pytest-asyncio", specifier = ">=1.4.0" },

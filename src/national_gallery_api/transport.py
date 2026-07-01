@@ -6,7 +6,9 @@ from httpx_retries import Retry, RetryTransport
 
 _RETRY_STATUS = (429, 502, 503, 504)
 _NO_CACHE_DIRECTIVES = ("no-store", "no-cache", "private")
-_DEFAULT_TTL = 3600.0
+_DEFAULT_TTL = 86400.0  # 24 hours
+_DEFAULT_RETRY_CNT = 3
+_DEFAULT_RETRY_BACKOFF = 0.5
 
 
 class _Cacheable(BaseFilter[Response]):
@@ -23,7 +25,7 @@ class _Cacheable(BaseFilter[Response]):
 
 
 def _retry() -> Retry:
-    return Retry(total=3, backoff_factor=0.5, status_forcelist=list(_RETRY_STATUS))
+    return Retry(total=_DEFAULT_RETRY_CNT, backoff_factor=_DEFAULT_RETRY_BACKOFF, status_forcelist=list(_RETRY_STATUS))
 
 
 def _policy() -> FilterPolicy:
@@ -39,7 +41,7 @@ def build_sync_transport(
     if not cache:
         return retry
     storage = hishel.SyncSqliteStorage(database_path=database_path, default_ttl=ttl)
-    # pyrefly: ignore[bad-argument-type]  # hishel's try/except ImportError stub confuses the type; sqlite3 is stdlib so the real SyncBaseStorage subclass is always used
+    # pyrefly: ignore[bad-argument-type]  # hishel's try/except ImportError stub confuses the type
     return SyncCacheTransport(next_transport=retry, storage=storage, policy=_policy())
 
 
@@ -50,5 +52,5 @@ def build_async_transport(
     if not cache:
         return retry
     storage = hishel.AsyncSqliteStorage(database_path=database_path, default_ttl=ttl)
-    # pyrefly: ignore[bad-argument-type]  # hishel's try/except ImportError stub confuses the type; sqlite3 is stdlib so the real AsyncBaseStorage subclass is always used
+    # pyrefly: ignore[bad-argument-type]  # hishel's try/except ImportError stub confuses the type
     return AsyncCacheTransport(next_transport=retry, storage=storage, policy=_policy())

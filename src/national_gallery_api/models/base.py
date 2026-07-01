@@ -48,9 +48,8 @@ def _identifier_value(identifiers: list[Identifier], type_: str) -> str | None:
 class Entity(BaseModel):
     """Base for entities returned by the search API.
 
-    Modelled loosely: the backend is schemaless, so only `pid` is treated as
-    meaningful and everything else is optional. The untouched `_source` is kept
-    on `raw` as an escape hatch for fields not surfaced as typed attributes.
+    Modelled loosely: the backend is schemaless, so only `pid` is treated as meaningful and everything else is
+    optional. The untouched `_source` is kept on `raw` as an escape hatch for fields not surfaced as typed attributes.
     """
 
     model_config = ConfigDict(populate_by_name=True)
