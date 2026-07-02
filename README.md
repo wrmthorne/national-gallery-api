@@ -5,6 +5,8 @@ A small Python wrapper around the National Gallery (London) Elasticsearch search
 1. A more pythonic interface with the National Gallery API
 2. Plain-text rendering of records e.g. for use in LLM prompts (entity disambiguation, authority linking, etc.)
 
+> National Gallery data is offered for reuse under specific [licences](https://www.nationalgallery.org.uk/documentation/ngacuk/licences).
+
 ## Setup
 
 ```bash
