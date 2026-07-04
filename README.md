@@ -105,9 +105,23 @@ Person: Vincent van Gogh
   External IDs: http://viaf.org/viaf/9854560; http://vocab.getty.edu/ulan/500115588; https://rkd.nl/artists/32439; https://www.wikidata.org/entity/Q5582
 ```
 
+## Free-text search across all types
+
+Calling `search` on the client object with a string performs a free-text search across all fields:
+
+```python
+with NationalGallery() as ng:
+    results = ng.search("van gogh", size=10)
+    for entity in results:
+        ...
+    
+    # mixed collections of entity types can still be passed
+    print(render_candidates(results))
+```
+
 ## Raw Elasticsearch queries
 
-If a query or field is not covered by the typed API, raw Elasticsearch queries can be made, returning an unparsed response dict:
+Calling `search` on the client object with an Elasticsearch body allows for custom queries, returning an unparsed response dict. This should be used for any queries or fields not handled by the typed API:
 
 ```python
 with NationalGallery() as ng:

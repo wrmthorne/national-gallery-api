@@ -1,10 +1,18 @@
 import httpx
 import pytest
 
-from national_gallery_api import NationalGallery, Person, Work
+from national_gallery_api import NationalGallery, Person, Publication, SearchResults, Work
 from national_gallery_api.exceptions import APIError, NotFoundError
 
-from .conftest import PERSON_SOURCE, WORK_SOURCE, MockAPI, es_payload, identifier_of, pid_of
+from .conftest import (
+    PERSON_SOURCE,
+    PUBLICATION_SOURCE,
+    WORK_SOURCE,
+    MockAPI,
+    es_payload,
+    identifier_of,
+    pid_of,
+)
 
 
 def reply(api: MockAPI, payload: dict) -> None:
@@ -139,10 +147,32 @@ def test_get_by_ng_number_raises_not_found(mock_api: MockAPI):
         ng.works.get_by_ng_number("NG0000")
 
 
+def test_free_text_search_returns_mixed_typed_results(mock_api: MockAPI):
+    # A string query dispatches to a free-text search whose hits may be of any and of mixed types.
+    reply(mock_api, es_payload([PERSON_SOURCE, WORK_SOURCE, PUBLICATION_SOURCE], total=3))
+    with NationalGallery() as ng:
+        results = ng.search("van gogh")
+    assert isinstance(results, SearchResults)
+    assert results.total.value == 3
+    assert [type(e) for e in results] == [Person, Work, Publication]
+
+
+def test_free_text_search_builds_multi_match_body(mock_api: MockAPI):
+    reply(mock_api, es_payload([]))
+    with NationalGallery() as ng:
+        ng.search("van gogh", size=5, from_=10)
+    body = mock_api.last_request
+    assert body["query"] == {"multi_match": {"query": "van gogh", "fields": ["*"]}}
+    assert body["size"] == 5
+    assert body["from"] == 10
+
+
 def test_raw_search_returns_payload(mock_api: MockAPI):
     reply(mock_api, es_payload([], total=42))
     with NationalGallery() as ng:
         payload = ng.search({"query": {"match_all": {}}, "size": 0})
+    # A dict query is sent verbatim and the raw JSON is returned unparsed.
+    assert isinstance(payload, dict)
     assert payload["hits"]["total"]["value"] == 42
 
 

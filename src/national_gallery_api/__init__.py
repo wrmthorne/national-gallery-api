@@ -19,7 +19,7 @@ from .models import (
     parse_hit,
     parse_response,
 )
-from .queries import EntityType, build_search
+from .queries import EntityType, build_free_text, build_search
 from .rendering import render_candidates, to_context
 
 __all__ = [
@@ -45,6 +45,7 @@ __all__ = [
     "SearchResults",
     "Total",
     "Work",
+    "build_free_text",
     "build_search",
     "model_for",
     "parse_hit",

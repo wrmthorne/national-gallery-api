@@ -1,10 +1,18 @@
 import httpx
 import pytest
 
-from national_gallery_api import AsyncNationalGallery, Person, Work
+from national_gallery_api import AsyncNationalGallery, Person, Publication, SearchResults, Work
 from national_gallery_api.exceptions import APIError, NotFoundError
 
-from .conftest import PERSON_SOURCE, WORK_SOURCE, MockAPI, es_payload, identifier_of, pid_of
+from .conftest import (
+    PERSON_SOURCE,
+    PUBLICATION_SOURCE,
+    WORK_SOURCE,
+    MockAPI,
+    es_payload,
+    identifier_of,
+    pid_of,
+)
 
 
 def reply(api: MockAPI, payload: dict) -> None:
@@ -61,10 +69,22 @@ async def test_async_get_by_ng_number_raises_not_found(mock_api: MockAPI):
             await ng.works.get_by_ng_number("NG0000")
 
 
+async def test_async_free_text_search_returns_mixed_typed_results(mock_api: MockAPI):
+    reply(mock_api, es_payload([PERSON_SOURCE, WORK_SOURCE, PUBLICATION_SOURCE], total=3))
+    async with AsyncNationalGallery() as ng:
+        results = await ng.search("van gogh", size=5)
+    assert isinstance(results, SearchResults)
+    assert results.total.value == 3
+    assert [type(e) for e in results] == [Person, Work, Publication]
+    assert mock_api.last_request["query"] == {"multi_match": {"query": "van gogh", "fields": ["*"]}}
+    assert mock_api.last_request["size"] == 5
+
+
 async def test_async_raw_search(mock_api: MockAPI):
     reply(mock_api, es_payload([], total=7))
     async with AsyncNationalGallery() as ng:
         payload = await ng.search({"query": {"match_all": {}}})
+    assert isinstance(payload, dict)
     assert payload["hits"]["total"]["value"] == 7
 
 

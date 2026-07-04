@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from collections.abc import AsyncIterator, Iterator
-from typing import Any
+from typing import Any, overload
 
 import httpx
 from pydantic import BaseModel
@@ -21,8 +21,9 @@ from .models import (
     Place,
     Publication,
     Work,
+    parse_response,
 )
-from .queries import EntityType, build_search
+from .queries import EntityType, build_free_text, build_search
 from .transport import build_async_transport, build_sync_transport
 
 URL = "https://data.ng.ac.uk/es/public/_search"
@@ -186,7 +187,25 @@ class NationalGallery:
             setattr(self, attr, _SyncResource(self, model, base, default_actual))
         self.works = _SyncWorks(self, Work, EntityType.OBJECT)
 
-    def search(self, body: dict[str, Any]) -> dict[str, Any]:
+    @overload
+    def search(self, query: dict[str, Any]) -> dict[str, Any]: ...
+    @overload
+    def search(self, query: str, *, size: int = 10, from_: int = 0) -> SearchResults[Entity]: ...
+    def search(
+        self, query: str | dict[str, Any], *, size: int = 10, from_: int = 0
+    ) -> SearchResults[Entity] | dict[str, Any]:
+        """Search the API.
+
+        Passing a **string** performs a free-text search across all fields and every entity type, returning a
+        :class:`SearchResults` of parsed entities that may be of any and of mixed types. Passing a **dict** sends
+        that Elasticsearch body verbatim and returns the raw JSON response.
+        """
+        if isinstance(query, str):
+            payload = self._post(build_free_text(query, size=size, from_=from_))
+            return SearchResults(parse_response(payload), payload)
+        return self._post(query)
+
+    def _post(self, body: dict[str, Any]) -> dict[str, Any]:
         response = self._client.post(URL, json=body)
         if response.status_code >= 400:
             raise APIError(f"search failed: {response.text[:200]}", status_code=response.status_code)
@@ -278,7 +297,25 @@ class AsyncNationalGallery:
             setattr(self, attr, _AsyncResource(self, model, base, default_actual))
         self.works = _AsyncWorks(self, Work, EntityType.OBJECT)
 
-    async def search(self, body: dict[str, Any]) -> dict[str, Any]:
+    @overload
+    async def search(self, query: dict[str, Any]) -> dict[str, Any]: ...
+    @overload
+    async def search(self, query: str, *, size: int = 10, from_: int = 0) -> SearchResults[Entity]: ...
+    async def search(
+        self, query: str | dict[str, Any], *, size: int = 10, from_: int = 0
+    ) -> SearchResults[Entity] | dict[str, Any]:
+        """Search the API.
+
+        Passing a **string** performs a free-text search across all fields and every entity type, returning a
+        :class:`SearchResults` of parsed entities that may be of any and of mixed types. Passing a **dict** sends
+        that Elasticsearch body verbatim and returns the raw JSON response.
+        """
+        if isinstance(query, str):
+            payload = await self._post(build_free_text(query, size=size, from_=from_))
+            return SearchResults(parse_response(payload), payload)
+        return await self._post(query)
+
+    async def _post(self, body: dict[str, Any]) -> dict[str, Any]:
         response = await self._client.post(URL, json=body)
         if response.status_code >= 400:
             raise APIError(f"search failed: {response.text[:200]}", status_code=response.status_code)

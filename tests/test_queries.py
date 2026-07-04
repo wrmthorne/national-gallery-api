@@ -1,4 +1,4 @@
-from national_gallery_api import EntityType, build_search
+from national_gallery_api import EntityType, build_free_text, build_search
 
 
 def test_empty_query_is_match_all():
@@ -39,6 +39,21 @@ def test_all_clauses_combined_in_order():
     ]
     assert body["size"] == 3
     assert body["from"] == 20
+
+
+def test_free_text_matches_all_fields_without_type_filter():
+    body = build_free_text("van gogh")
+    # multi_match over ["*"] with no @datatype clause -> any and mixed types.
+    assert body["query"] == {"multi_match": {"query": "van gogh", "fields": ["*"]}}
+    assert body["size"] == 10
+    assert body["from"] == 0
+
+
+def test_free_text_passes_size_and_from():
+    body = build_free_text("sunflowers", size=25, from_=50)
+    assert body["query"]["multi_match"]["query"] == "sunflowers"
+    assert body["size"] == 25
+    assert body["from"] == 50
 
 
 def test_entitytype_is_str_enum():
