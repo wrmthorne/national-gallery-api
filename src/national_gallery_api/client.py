@@ -56,9 +56,10 @@ class Total(BaseModel):
 
 
 class SearchResults[E: Entity]:
-    def __init__(self, items: list[E], payload: dict[str, Any]) -> None:
+    def __init__(self, items: list[E], payload: dict[str, Any], query: str | None = None) -> None:
         self._items = items
         self.raw = payload
+        self.query = query
         hits = payload.get("hits", {})
         self.total = Total.model_validate(hits.get("total") or {})
         self.aggregations: dict[str, Any] = payload.get("aggregations", {})
@@ -71,6 +72,11 @@ class SearchResults[E: Entity]:
 
     def __getitem__(self, index: int) -> E:
         return self._items[index]
+
+    def __repr__(self) -> str:
+        subject = f"{self.query!r}" if self.query is not None else "all entities"
+        count = self.total.value if self.total.exact else f"{self.total.value}+"
+        return f"SearchResults for {subject}. Total results found: {count}."
 
 
 def _page_body(
@@ -130,7 +136,7 @@ class _SyncResource[E: Entity]:
         actual = _resolve_actual(actual, self._default_actual)
         body = build_search(text, base=self._base, actual=actual, size=size, from_=from_)
         payload = self._client.search(body)
-        return SearchResults(self._model.from_response(payload), payload)
+        return SearchResults(self._model.from_response(payload), payload, text)
 
     def get(self, pid: str) -> E:
         payload = self._client.search(_term_body("identifier.value", pid, self._base))
@@ -202,7 +208,7 @@ class NationalGallery:
         """
         if isinstance(query, str):
             payload = self._post(build_free_text(query, size=size, from_=from_))
-            return SearchResults(parse_response(payload), payload)
+            return SearchResults(parse_response(payload), payload, query)
         return self._post(query)
 
     def _post(self, body: dict[str, Any]) -> dict[str, Any]:
@@ -236,7 +242,7 @@ class _AsyncResource[E: Entity]:
         actual = _resolve_actual(actual, self._default_actual)
         body = build_search(text, base=self._base, actual=actual, size=size, from_=from_)
         payload = await self._client.search(body)
-        return SearchResults(self._model.from_response(payload), payload)
+        return SearchResults(self._model.from_response(payload), payload, text)
 
     async def get(self, pid: str) -> E:
         payload = await self._client.search(_term_body("identifier.value", pid, self._base))
@@ -312,7 +318,7 @@ class AsyncNationalGallery:
         """
         if isinstance(query, str):
             payload = await self._post(build_free_text(query, size=size, from_=from_))
-            return SearchResults(parse_response(payload), payload)
+            return SearchResults(parse_response(payload), payload, query)
         return await self._post(query)
 
     async def _post(self, body: dict[str, Any]) -> dict[str, Any]:

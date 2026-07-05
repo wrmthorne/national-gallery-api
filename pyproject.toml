@@ -91,6 +91,7 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "hishel[async]>=1.2.1",
+    "ipykernel>=7.3.0",
     "pyrefly>=1.0.0",
     "pytest>=9.0.3",
     "pytest-asyncio>=1.4.0",

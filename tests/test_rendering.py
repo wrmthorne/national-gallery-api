@@ -16,6 +16,7 @@ from national_gallery_api import (
     to_context,
 )
 from national_gallery_api.models import _BY_BASE
+from national_gallery_api.rendering import _GENERIC, _SPECS
 
 from .conftest import (
     ARCHIVE_SOURCE,
@@ -38,7 +39,7 @@ def test_person_render_format():
     rendered = to_context(p)
     assert rendered.splitlines()[0] == f"Person: {p.title}"
     assert f"  PID: {p.pid}" in rendered
-    assert f"  Subtype: {p.datatype.actual}" in rendered
+    assert f"  Subtype: {p.actual}" in rendered
     assert f"  Dates: {p.dates}" in rendered
     assert f"  Names: {'; '.join(p.names)}" in rendered
     assert f"  External IDs: {'; '.join(sorted(p.external_ids))}" in rendered
@@ -100,12 +101,11 @@ def test_place_render_includes_coordinates():
 
 
 def test_every_concrete_type_has_a_dedicated_renderer():
-    # Guard against `model_for` gaining a type without a matching `to_context` registration,
-    # which would silently fall back to the generic `Entity` renderer.
-    fallback = to_context.dispatch(Entity)
+    # Guard against `model_for` gaining a type without a matching `_SPECS` entry,
+    # which would silently fall back to the generic (`_GENERIC`) `Entity` renderer.
     concrete = set(_BY_BASE.values()) | {Person, Organisation}
-    missing = [t.__name__ for t in concrete if to_context.dispatch(t) is fallback]
-    assert not missing, f"types dispatching to the generic Entity renderer: {missing}"
+    missing = [t.__name__ for t in concrete if _SPECS.get(t, _GENERIC) is _GENERIC]
+    assert not missing, f"types falling back to the generic Entity renderer: {missing}"
 
 
 def test_base_entity_render_fallback():

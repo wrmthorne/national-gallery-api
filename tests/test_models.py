@@ -46,9 +46,8 @@ def test_person_fields():
     assert p.pid == pid_of(src)
     assert p.names == value_list(src["name"])
     assert p.dates == src["date"][0]["value"]
-    assert p.datatype is not None
-    assert p.datatype.base == src["@datatype"]["base"]
-    assert p.datatype.actual == src["@datatype"]["actual"]
+    assert p.base == src["@datatype"]["base"]
+    assert p.actual == src["@datatype"]["actual"]
 
 
 def test_person_external_ids_only_external_type():
@@ -105,8 +104,10 @@ def test_work_fields():
     assert w.object_number == identifier_of(src, "object number")
     assert w.makers == titles_of(creation["maker"])
     assert w.date == creation["date"][0]["value"]
+    # A bibliography entry is a reference to a publication, with citation metadata on `.link`.
     assert w.bibliography[0].title == first_biblio["summary"]["title"]
-    assert str(w.bibliography[0].page) == str(first_biblio["@link"]["details"]["page"])
+    assert w.bibliography[0].base == "publication"
+    assert w.bibliography[0].link.details.page.raw == first_biblio["@link"]["details"]["page"]
 
 
 def test_work_without_creation():
