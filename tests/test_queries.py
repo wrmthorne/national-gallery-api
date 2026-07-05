@@ -14,7 +14,7 @@ def test_text_only_uses_match_on_title():
 
 
 def test_blank_text_is_ignored():
-    # Falsy text must not add a match clause.
+    # Falsy text must not add a match clause
     assert build_search("")["query"] == {"match_all": {}}
 
 
@@ -43,7 +43,7 @@ def test_all_clauses_combined_in_order():
 
 def test_free_text_matches_all_fields_without_type_filter():
     body = build_free_text("van gogh")
-    # multi_match over ["*"] with no @datatype clause -> any and mixed types.
+    # multi_match over ["*"] with no @datatype clause
     assert body["query"] == {"multi_match": {"query": "van gogh", "fields": ["*"]}}
     assert body["size"] == 10
     assert body["from"] == 0

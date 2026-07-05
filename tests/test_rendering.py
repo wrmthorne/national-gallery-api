@@ -102,14 +102,14 @@ def test_place_render_includes_coordinates():
 
 def test_every_concrete_type_has_a_dedicated_renderer():
     # Guard against `model_for` gaining a type without a matching `_SPECS` entry,
-    # which would silently fall back to the generic (`_GENERIC`) `Entity` renderer.
+    # which would silently fall back to the generic (`_GENERIC`) `Entity` renderer
     concrete = set(_BY_BASE.values()) | {Person, Organisation}
     missing = [t.__name__ for t in concrete if _SPECS.get(t, _GENERIC) is _GENERIC]
     assert not missing, f"types falling back to the generic Entity renderer: {missing}"
 
 
 def test_base_entity_render_fallback():
-    # An Entity that isn't a registered subtype uses the generic renderer.
+    # An Entity that isn't a registered subtype uses the generic renderer
     e = Entity.from_hit({"_source": {"summary": {"title": "Thing"}, "@datatype": {"base": "mystery"}}})
     rendered = to_context(e)
     assert rendered.startswith("Entity: Thing")

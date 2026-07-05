@@ -1,13 +1,17 @@
 # National Gallery API Wrapper
 
-A small Python wrapper around the National Gallery (London) Elasticsearch search endpoint (`https://data.ng.ac.uk/es/public/_search`). The library aims to provide:
+A small Python wrapper around the National Gallery (London) [Elasticsearch search endpoint](https://data.ng.ac.uk/es/public/_search). The library aims to provide:
 
 1. A more pythonic interface with the National Gallery API
 2. Plain-text rendering of records e.g. for use in LLM prompts (entity disambiguation, authority linking, etc.)
 
+For a practical example of how this library can be used, some [example notebooks](examples/) are included. 
+
 > National Gallery data is offered for reuse under specific [licences](https://www.nationalgallery.org.uk/documentation/ngacuk/licences).
 
 ## Setup
+
+This package is available for [install via PyPi](https://pypi.org/project/national-gallery-api/):
 
 ```bash
 # sync only
@@ -42,7 +46,7 @@ with NationalGallery() as ng:
     print(vincent.external_ids)   # ULAN, Wikidata, RKD, VIAF, ...
 ```
 
-## Iterate over all results
+### Iterate over all results
 
 `iter_all` lazily walks an entire result set, handling paging internally:
 
@@ -50,6 +54,40 @@ with NationalGallery() as ng:
 with NationalGallery() as ng:
     for person in ng.people.iter_all(actual="Individual", page_size=100):
         ...
+```
+
+## Navigating Objects
+
+Data objects are constructed at runtime to reflect the schemaless nature of the [CIIM model](https://docs.ciim.k-int.com/technical/how-ciim-works/) served by the API. Child models are dynamically named to be semantically informative: 
+
+```python
+with NationalGallery() as ng:
+    vincent = ng.people.get("0QCE-0001-0000-0000")
+
+    print(vincent.birth.date[0].value)   # 1853
+    print(vincent.description[0].value)  # Van Gogh is today one of the most popular ...
+```
+
+The model's `__repr__` is designed to make exploring complex, deeply nested records clearer:
+
+```
+Person(
+  date=[Date(from_='1853', to='1890', value='1853 - 1890')],
+  summary=Summary(title='Vincent van Gogh'),
+  identifier=[
+    Identifier(type='PID', value='0QCE-0001-0000-0000'),
+    
+      # ... 375 more lines of content
+      
+      created=1633515854787,
+      formatted='<div><p>Van Gogh is today one of the most popular of the <a href="/paintings/glossary/post-impressionism">Post-Impressio'…(+1539 chars),
+      source='TMS',
+      type='web text',
+      value='Van Gogh is today one of the most popular of the Post-Impressionist painters, although he was not widely appreciated dur'…(+1175 chars),
+      status='Active'
+    )
+  ]
+)
 ```
 
 ## Caching
@@ -91,7 +129,7 @@ with NationalGallery() as ng:
     print(to_context(vincent)) # for single entities
 
     candidates = ng.people.search("rembrandt", actual="Individual", size=5)
-    print(render_candidates(candidates)) # for record sets
+    print(render_candidates(candidates)) # for single entities or record sets
 ```
 
 Example `to_context` output:
@@ -99,9 +137,9 @@ Example `to_context` output:
 ```
 Person: Vincent van Gogh
   PID: 0QCE-0001-0000-0000
-  Subtype: Individual
-  Dates: 1853 - 1890
   Names: Vincent van Gogh; Gogh, Vincent van
+  Dates: 1853 - 1890
+  Roles: artist
   External IDs: http://viaf.org/viaf/9854560; http://vocab.getty.edu/ulan/500115588; https://rkd.nl/artists/32439; https://www.wikidata.org/entity/Q5582
 ```
 

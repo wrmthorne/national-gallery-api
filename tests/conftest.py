@@ -94,7 +94,7 @@ class MockAPI:
 
     def __init__(self) -> None:
         self.requests: list[dict[str, Any]] = []
-        # Default: every request gets an empty result set. Tests override this.
+        # Default: every request gets an empty result set. Tests override this
         self.respond: Callable[[dict[str, Any]], httpx.Response] = lambda body: httpx.Response(
             200, json=es_payload([])
         )

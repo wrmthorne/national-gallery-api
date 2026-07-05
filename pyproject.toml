@@ -1,6 +1,6 @@
 [project]
 name = "national-gallery-api"
-version = "0.1.1"
+version = "0.2.0"
 description = "Python client for the National Gallery (London) Elasticsearch API"
 keywords = ["national gallery", "ng", "api", "elasticsearch", "art", "museum", "london"]
 readme = "README.md"

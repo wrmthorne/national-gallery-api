@@ -65,7 +65,6 @@ def test_raw_preserves_source():
 
 
 def test_from_hit_without_source_wrapper():
-    # A bare document (no `_source` envelope) is accepted as-is.
     p = Person.from_hit(PERSON_SOURCE)
     assert p.pid == pid_of(PERSON_SOURCE)
 
@@ -104,7 +103,7 @@ def test_work_fields():
     assert w.object_number == identifier_of(src, "object number")
     assert w.makers == titles_of(creation["maker"])
     assert w.date == creation["date"][0]["value"]
-    # A bibliography entry is a reference to a publication, with citation metadata on `.link`.
+    # A bibliography entry is a reference to a publication, with citation metadata on `.link`
     assert w.bibliography[0].title == first_biblio["summary"]["title"]
     assert w.bibliography[0].base == "publication"
     assert w.bibliography[0].link.details.page.raw == first_biblio["@link"]["details"]["page"]
@@ -209,7 +208,7 @@ def test_entities_without_pid_are_not_equal():
 
 
 def test_different_types_with_same_pid_hash_differently():
-    # Hash mixes in the type name, so a Person and Work sharing a PID don't collide.
+    # Hash mixes in the type name, so a Person and Work sharing a PID don't collide
     src = {"identifier": [{"type": "PID", "value": "SHARED"}]}
     assert hash(Person.from_hit({"_source": src})) != hash(Work.from_hit({"_source": src}))
 

@@ -148,7 +148,7 @@ def test_get_by_ng_number_raises_not_found(mock_api: MockAPI):
 
 
 def test_free_text_search_returns_mixed_typed_results(mock_api: MockAPI):
-    # A string query dispatches to a free-text search whose hits may be of any and of mixed types.
+    # A string query dispatches to a free-text search whose hits may be of any and of mixed types
     reply(mock_api, es_payload([PERSON_SOURCE, WORK_SOURCE, PUBLICATION_SOURCE], total=3))
     with NationalGallery() as ng:
         results = ng.search("van gogh")
@@ -200,13 +200,13 @@ def test_iter_all_pages_with_search_after(mock_api: MockAPI):
 
     assert len(items) == 3
     assert all(isinstance(w, Work) for w in items)
-    # First page has no search_after; second pages from the last sort of page 1.
+    # First page has no search_after; second pages from the last sort of page 1
     assert "search_after" not in mock_api.requests[0]
     assert mock_api.requests[1]["search_after"] == ["b"]
 
 
 def test_iter_all_stops_on_short_page(mock_api: MockAPI):
-    # A page smaller than page_size means there is nothing more to fetch.
+    # A page smaller than page_size means there is nothing more to fetch
     reply(mock_api, es_payload([WORK_SOURCE], sorts=[["a"]]))
     with NationalGallery() as ng:
         items = list(ng.works.iter_all(page_size=10))
@@ -215,7 +215,7 @@ def test_iter_all_stops_on_short_page(mock_api: MockAPI):
 
 
 def test_iter_all_stops_when_sort_missing(mock_api: MockAPI):
-    # A full page whose last hit lacks `sort` cannot be paged past.
+    # A full page whose last hit lacks `sort` cannot be paged past
     full_page = es_payload([WORK_SOURCE, WORK_SOURCE])  # no sorts
     mock_api.reply_once_with([full_page])
     with NationalGallery() as ng:

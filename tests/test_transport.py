@@ -72,7 +72,7 @@ def test_build_async_transport_without_cache_is_retry_only():
 
 
 def test_build_async_transport_with_cache(tmp_path):
-    # The async SQLite cache backend ships in the optional `hishel[async]` extra.
+    # The async SQLite cache backend ships in the optional `hishel[async]` extra
     pytest.importorskip("anysqlite")
     transport = build_async_transport(cache=True, database_path=str(tmp_path / "c.db"))
     assert isinstance(transport, AsyncCacheTransport)

@@ -31,9 +31,6 @@ def _block(header: str, fields: list[str | None]) -> str:
 
 
 # --- extraction helpers -------------------------------------------------------------------------
-# Each spec entry is a guard-free navigation one-liner. Navigation *within* a present field is lenient (a
-# missing sub-path yields an empty Node / None / []); an absent top-level key on the entity raises, which
-# `to_context` catches per-extractor and renders as an omitted field.
 
 
 def _first(node: Node) -> Node:
@@ -74,7 +71,7 @@ def _location(entity: Entity) -> str:
 
 
 # --- per-type summary specs ---------------------------------------------------------------------
-# Each entry is (label, extractor). The extractor returns a str, a list, a Node, or None; `_fmt` normalises.
+# Each entry is (label, extractor). The extractor returns a str, a list, a Node, or None which `_fmt` normalises
 
 Extractor = Callable[[Entity], object]
 
@@ -136,8 +133,7 @@ _SPECS: dict[type[Entity], list[tuple[str, Extractor]]] = {
     ],
 }
 
-# Fallback for the base Entity and any type without a spec (e.g. mixed free-text results): the fields common
-# to almost every NG document.
+# Fallback for the base Entity and any type without a spec (e.g. mixed free-text results)
 _GENERIC: list[tuple[str, Extractor]] = [
     ("Type", lambda e: e.actual or e.base),
     ("Names", lambda e: e.name.values),

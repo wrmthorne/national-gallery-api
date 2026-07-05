@@ -98,7 +98,7 @@ def _dig(data: Any, *keys: str) -> Any:
     return data
 
 
-# Display-only cap for long scalar strings in a print; navigation/`raw` always return the full value.
+# Display-only cap for long scalar strings in a print; navigation/`raw` always return the full value
 _MAX_STR = 120
 
 
@@ -130,7 +130,7 @@ def _class_name(data: dict[str, Any], key_hint: str | None) -> str:
 
 
 # Target line width: a node renders inline when it fits within this column, and breaks onto indented
-# lines (recursively) when it doesn't -- so small objects stay compact and complex ones open up.
+# lines (recursively) when it doesn't -- so small objects stay compact and complex ones open up
 _WIDTH = 100
 
 

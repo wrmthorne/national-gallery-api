@@ -29,9 +29,6 @@ def test_get_work_by_pid():
 
 @pytest.mark.vcr
 def test_iter_all_pages_real_data():
-    # No text filter, so this pages over the whole works collection; we break
-    # after a few pages. search_after ordering (by @admin.uid) is deterministic,
-    # so the cassette replays the same pages every run.
     with NationalGallery() as ng:
         items = []
         for work in ng.works.iter_all(page_size=10):
