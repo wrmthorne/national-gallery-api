@@ -39,9 +39,9 @@ def test_person_render_format():
     rendered = to_context(p)
     assert rendered.splitlines()[0] == f"Person: {p.title}"
     assert f"  PID: {p.pid}" in rendered
-    assert f"  Subtype: {p.actual}" in rendered
     assert f"  Dates: {p.dates}" in rendered
     assert f"  Names: {'; '.join(p.names)}" in rendered
+    assert f"  Roles: {'; '.join(sorted(r.value for r in p.role))}" in rendered
     assert f"  External IDs: {'; '.join(sorted(p.external_ids))}" in rendered
 
 

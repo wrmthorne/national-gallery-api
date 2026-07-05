@@ -80,9 +80,9 @@ Extractor = Callable[[Entity], object]
 
 _SPECS: dict[type[Entity], list[tuple[str, Extractor]]] = {
     Person: [
-        ("Subtype", lambda e: e.actual),
-        ("Dates", lambda e: e.date[0].value),
         ("Names", lambda e: e.name.values),
+        ("Dates", lambda e: e.date[0].value),
+        ("Roles", lambda e: sorted(r.value for r in e.role)),
         ("External IDs", lambda e: sorted(e.external_ids)),
     ],
     Organisation: [

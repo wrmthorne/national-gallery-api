@@ -68,6 +68,11 @@ ignore = []
 
 fixable = ["ALL"]
 
+[tool.ruff.lint.per-file-ignores]
+# Example notebooks embed prose LLM prompts as string literals; wrapping them would
+# inject line breaks into the actual prompt text, so allow long lines there.
+"examples/*.ipynb" = ["E501"]
+
 [tool.ruff.format]
 quote-style = "double"
 indent-style = "space"
@@ -92,6 +97,7 @@ build-backend = "uv_build"
 dev = [
     "hishel[async]>=1.2.1",
     "ipykernel>=7.3.0",
+    "openai>=2.44.0",
     "pyrefly>=1.0.0",
     "pytest>=9.0.3",
     "pytest-asyncio>=1.4.0",
